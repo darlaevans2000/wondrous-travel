@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<body lang="en-US">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webpack Starter Kit</title>
+  <meta charset='UTF-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+  <title>Wondrous Travel</title>
 </head>
 <body>
-  <img src="./images/turing-logo.png" alt="turing logo" height="100px" width="100px">
-  
-  <!-- Do not include the index.js or main.bundle.js file here - it is done automatically by the webpack server -->
-  <script src="bundle.js"></script>
+  <section class="login-page" id="loginPage">
+    <div class="login-container">
+      <form tabindex=-1 class="login-form" id="login-form">
+        <img class="logo-login" alt="Wondrous Travel globe logo and text" src="./images/logo.png">
+        <label for="username">Username</label>
+        <input tabindex=0 type="text" name="username" id="username" class="login-input" placeholder="username">
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password" class="login-input" placeholder="password">
+        <button type="submit" class="login-button" id="loginBtn">Login</button>
+      </form>
+    </div>
+  </section>
 
+
+<script src="bundle.js"></script>
 </body>
+
 </html>

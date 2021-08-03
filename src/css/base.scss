@@ -1,7 +1,97 @@
-/* This is an example of using Sass, otherwise plain CSS works too*/
-$primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-;
 
+
+// login page 
 body {
-  background: $primary-background;
+  background-image: url('../images/background.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.login-page {
+  display: flex;
+  height: 150%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kanit', sans-serif;
+
+  @media screen and (max-width: 800px) {
+    margin-top: 18vw;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-top: 23vw;
+  }
+}
+
+.login-container {
+  padding-top: 5%;
+  display: grid;
+  grid-template-rows: 45% 45%;
+  height: 100%;
+  width: 35%;
+  margin-top: 10%;
+  color:rgba(0, 0, 0, 0.2);
+  background-color: rgba(255,255,255,0.5);
+  font-size: 20px;
+
+  @media screen and (max-width: 400px) {
+    width: 80%;
+  }
+}
+
+.logo-login {
+  align-self: center;
+  justify-self: center;
+  height: 200%;
+
+  @media screen and (max-width: 1050px) {
+    height: 100%;
+  }
+
+  @media screen and (max-width: 800px) {
+   height: 80%;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  padding: 1vw;
+  color: rgba(4, 5, 5, 0.921);
+
+  @media screen and (max-width: 1050px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
+}
+
+.login-input {
+  width: 50%;
+  padding: 0.25vw;
+  border: 1px solid black;
+  font-family: 'Kanit', sans-serif;
+  font-size: 15px;
+
+  @media screen and (max-width: 1050px) {
+    width: 50%;
+  }
+}
+
+.login-button {
+  width: 5em;
+  align-self: center;
+  cursor: pointer;
+  margin-top: 2%;
+  border: 1px solid black;
+  font-family: 'Kanit', sans-serif;
+  font-size: 15px;
 }
