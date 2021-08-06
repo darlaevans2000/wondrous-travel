@@ -1,0 +1,97 @@
+import chai from 'chai';
+const expect = chai.expect;
+
+import Trip from '../src/Trip';
+import destinationData from './test-data/destination-data';
+import tripsData from './test-data/trips-data';
+
+describe('Trip', () => {
+  let trip1
+  let trip3;
+
+  beforeEach(() => {
+    trip1 = new Trip(tripsData[0], destinationData[0])
+    trip3 = new Trip(tripsData[2], destinationData[2])
+  });
+
+  describe('Trip Properties', () => {
+    it('should be a function', () => {
+      expect(Trip).to.be.a('function')
+    })
+
+    it('should be an instance of Trip', () => {
+      expect(trip1).to.be.an.instanceof(Trip)
+    })
+
+    it('should have an id', () => {
+      expect(trip1.id).to.equal(1)
+      expect(trip3.id).to.equal(3)
+    })
+
+    it('should have a user id', () => {
+      expect(trip1.userID).to.equal(1)
+      expect(trip3.userID).to.equal(3)
+    })
+
+    it('should have a destination id', () => {
+      expect(trip1.destinationID).to.equal(1)
+      expect(trip3.destinationID).to.equal(3)
+    })
+
+    it('should have a number of total travelers', () => {
+      expect(trip1.travelers).to.equal(5)
+      expect(trip3.travelers).to.equal(2)
+    })
+
+    it('should have a date', () => {
+      expect(trip1.date).to.equal('2020/10/04')
+      expect(trip3.date).to.equal('2020/08/24')
+    })
+
+    it('should have a trip status', () => {
+      expect(trip1.status).to.equal('pending')
+      expect(trip3.status).to.equal('approved')
+    })
+
+    it('should have a trip duration', () => {
+      expect(trip1.duration).to.equal(18)
+      expect(trip3.duration).to.equal(11)
+    })
+
+    it('should have an array of suggested activities', () => {
+      expect(trip1.suggestedActivities).to.eql([])
+      expect(trip3.suggestedActivities).to.eql(['Opera House', 'Fishing'])
+    })
+
+    it('should have destination info object', () => {
+      expect(trip1.destination).to.eql(
+  {
+    "id": 1,
+    "destination": "Lima, Peru",
+    "estimatedLodgingCostPerDay": 70,
+    "estimatedFlightCostPerPerson": 400,
+    "image": "https://images.unsplash.com/photo-1489171084589-9b5031ebcf9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+    "alt": "overview of city buildings with a clear sky"
+})
+
+      expect(trip3.destination).to.eql(
+ {
+    "id": 3,
+    "destination": "Sydney, Austrailia",
+    "estimatedLodgingCostPerDay": 130,
+    "estimatedFlightCostPerPerson": 950,
+    "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+    "alt": "opera house and city buildings on the water with boats"
+})  
+
+  })
+  })
+
+  describe('Trip Methods', () => {
+    it('should be able to calculate the total amount of the trip', () => {
+      expect(trip1.estimateTotalTripCost()).to.equal(3586)
+      expect(trip3.estimateTotalTripCost()).to.equal(3663)
+    })
+  })
+
+})
