@@ -1,0 +1,74 @@
+// CARD GRID
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 94%;
+  height: 100%;
+}
+
+/** four card - lg screen **/
+
+.grid-title {
+  display: flex;
+  align-items: center;
+  height: 3vw;
+  margin: 4% 0 4% 1.5%;
+  font-size: 3.5vw;
+  color: $black;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  grid-row-gap: 1.5%;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5%;
+}
+
+/** three card - smaller screen **/
+
+@media screen and (min-width: 626px) and (max-width: 1050px) {
+  .grid-title {
+    font-size: 4vw;
+    margin: 5% 0 5% 1.5%;
+  }
+
+  .card-grid {
+    grid-template-columns: 31% 31% 31%;
+    grid-row-gap: 1.75%;
+  }
+}
+
+/** two card - smallest screen**/
+
+@media screen and (min-width: 375px) and (max-width: 625px) {
+  .grid-title {
+    margin: 5% 0 5% 2.7%;
+    font-size: 4.5vw;
+  }
+
+  .card-grid {
+    grid-template-columns: 45% 45%;
+    grid-column-gap: 1.5%;
+    grid-row-gap: 1.75%;
+  }
+}
+
+/** one card width **/
+
+@media screen and (max-width: 375px) {
+  .grid-title {
+    margin: 8% 0 7% 10%;
+    font-size: 5.5vw;
+  }
+  
+  .card-grid {
+    grid-template-columns: 80%;
+    grid-row-gap: 1%;
+  }
+}
