@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<body lang="en-US">
 
+<html lang="en">
 <head>
   <meta charset='UTF-8'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,17 +10,89 @@
   <title>Wondrous Travel</title>
 </head>
 <body>
-  <section class="login-page" id="loginPage">
-    <div class="login-container">
-      <form tabindex=-1 class="login-form" id="login-form">
-        <img class="logo-login" alt="Wondrous Travel globe logo and text" src="./images/logo.png">
-        <label for="username">Username</label>
-        <input tabindex=0 type="text" name="username" id="username" class="login-input" placeholder="username">
-        <label for="password">Password</label>
-        <input type="text" name="password" id="password" class="login-input" placeholder="password">
-        <button type="submit" class="login-button" id="loginBtn">Login</button>
+<section class="login-page hidden" id="loginPage">
+  <div class="login-container">
+    <form tabindex=-1 class="login-form" id="login-form">
+      <img class="logo-login" alt="Wondrous Travel globe logo and text" src="./images/logo.png">
+      <label for="username">Username</label>
+      <input tabindex=0 type="text" name="username" id="username" class="login-input" placeholder="username">
+      <label for="password">Password</label>
+      <input type="text" name="password" id="password" class="login-input" placeholder="password">
+      <button type="submit" class="login-btn" id="loginBtn">Login</button>
+    </form>
+  </div>
+</section>
+  <section class="user-page" id="userPage">
+    <header>
+      <section class="nav-left">
+        <h1 class="title">Wondrous Travel</h1>
+        <nav class="nav-btns">
+          <button class="nav-btn" id="currentTripsBtn">
+            Current Trips
+          </button>
+          <button class="nav-btn" id="upcomingTripsBtn">
+             Upcoming Trips
+          </button>
+          <button class="nav-btn" id="previousTripsBtn">
+             Previous Trips
+          </button>
+          <button class="nav-btn" id="pendingTripsBtn">
+            Pending Trips
+          </button>
+        </nav>
+      </section>
+      <section class="nav-right">
+        <div class="welcome">
+          <h2>Welcome,</h2>
+          <h2 id="currUserName"></h2>
+        </div>
+        <div class="total-spent">
+          <p class="total-title">Annual Travel Costs: </p>
+          <p class="total-amount" id="totalAmount"></p>
+        </div>
+        <button id="logoutBtn">LOG OUT</button>
+      </section>
+    </header>
+    <section class="booking-section">
+      <h2 for="bookingForm" class="book-top">
+        Book Your Next Trip:
+      </h2>
+      <form id="bookingForm" class="book-bottom">
+        <div class="selection">
+          <label for="destinationMenu">Select destination:
+            <select required name="destination-menu" id="destinationMenu">
+              <option value="0">Select destination</option>
+            </select>
+          </label>
+        </div>
+        <div class="selection">
+          <label for="startDateMenu">Departure date:
+            <input required name="start-date-menu" id="startDateMenu" type="date" min="2019-01-01" max="2050-12-31">
+          </label>
+        </div>
+        <div class="selection">
+        <label for="durationInput">Duration of trip:
+          <input required name="duration-input" id="durationInput" type="number" min="1" placeholder="number of nights">
+        </label>
+        </div>
+        <div class="selection">
+          <label for="travelersInput">Number of travelers:
+            <input required name="travelers-input" id="travelersInput" type="number" min="1">
+          </label>
+        </div>
+        <div class="booking-btns">
+          <button id="costBtn" type="button" name="button">Estimate Trip Cost</button>
+          <button id="bookBtn" type="button" name="button">Book Trip</button>
+        </div>
       </form>
-    </div>
+    </section>
+    <main>
+      <div class="main-wrapper">
+        <h2 class="grid-title" id="gridTitle">My Trips</h2>
+        <section class="card-grid" id="cardGrid">
+        </section>
+      </div>
+    </main>
   </section>
 
 
