@@ -10,8 +10,8 @@ describe('Trip', () => {
   let trip3;
 
   beforeEach(() => {
-    trip1 = new Trip(tripsData[0], destinationData[0])
-    trip3 = new Trip(tripsData[2], destinationData[2])
+    trip1 = new Trip(tripsData[0])
+    trip3 = new Trip(tripsData[2])
   });
 
   describe('Trip Properties', () => {
@@ -63,7 +63,20 @@ describe('Trip', () => {
       expect(trip3.suggestedActivities).to.eql(['Opera House', 'Fishing'])
     })
 
-    it('should have destination info object', () => {
+    it('should start off as undefined as default', () => {
+      expect(trip1.destination).to.equal(undefined)
+      expect(trip1.startDate).to.equal(undefined)
+      expect(trip1.endDate).to.equal(undefined)
+    })
+
+
+    it('should start off with 0 cost data as default', () => {
+      expect(trip1.cost).to.equal(0)
+    })
+
+  describe('Trip Methods', () => {
+       it('should be able to retrieve destination object', () => {
+      trip1.getDestinationInfo(destinationData)
       expect(trip1.destination).to.eql(
   {
     "id": 1,
@@ -73,7 +86,7 @@ describe('Trip', () => {
     "image": "https://images.unsplash.com/photo-1489171084589-9b5031ebcf9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
     "alt": "overview of city buildings with a clear sky"
 })
-
+      trip3.getDestinationInfo(destinationData)
       expect(trip3.destination).to.eql(
  {
     "id": 3,
@@ -85,13 +98,36 @@ describe('Trip', () => {
 })  
 
   })
-  })
 
-  describe('Trip Methods', () => {
-    it('should be able to calculate the total amount of the trip', () => {
-      expect(trip1.estimateTotalTripCost()).to.equal(3586)
-      expect(trip3.estimateTotalTripCost()).to.equal(3663)
+    it('should be able to retrieve start and end date of the trip in YYYY-MM-DD', () => {
+      trip1.getDates();
+      trip3.getDates();
+      expect(trip1.startDate).to.equal('2020-10-04')
+      expect(trip1.endDate).to.equal('2020-10-22')
+      expect(trip3.startDate).to.equal('2020-08-24')
+      expect(trip3.endDate).to.equal('2020-09-04')
     })
+
+    it('should be able to calculate the total amount of the trip', () => {
+      trip1.getDestinationInfo(destinationData)
+      trip3.getDestinationInfo(destinationData)
+      trip1.estimateTotalTripCost();
+      trip3.estimateTotalTripCost();
+      expect(trip1.cost).to.equal(3586);
+      expect(trip3.cost).to.equal(3663);
+    })
+
+    it('should be able to format dates into MMMM D, YYYY format', () => {
+      trip1.getPrettyFormatDates();
+      trip3.getPrettyFormatDates();
+      expect(trip1.startDate).to.equal('October 4, 2020')
+      expect(trip1.endDate).to.equal('October 22, 2020')
+      expect(trip3.startDate).to.equal('August 24, 2020')
+      expect(trip3.endDate).to.equal('September 4, 2020')
+    })
+
+
   })
 
+})
 })
