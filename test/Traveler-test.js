@@ -1,0 +1,119 @@
+import chai from 'chai';
+const expect = chai.expect;
+
+import Traveler from '../src/Traveler';
+import travelersData from './test-data/travelers-data';
+import tripsData from './test-data/trips-data';
+
+describe('Trip', () => {
+  let traveler1, traveler3;
+  beforeEach(() => {
+    traveler1 = new Traveler(travelersData[0]);
+    traveler3 = new Traveler(travelersData[2]);
+  });
+
+  describe('Traveler properties', () => {
+    it('should be a function', () => {
+      expect(Traveler).to.be.a('function')
+    })
+
+    it('should be an instance of Trip', () => {
+      expect(traveler1).to.be.an.instanceof(Traveler)
+    })
+
+    it('should have an id', () => {
+      expect(traveler1.id).to.equal(1)
+      expect(traveler3.id).to.equal(3)
+    })
+
+    it('should have a name', () => {
+      expect(traveler1.name).to.equal('Ham Leadbeater')
+      expect(traveler3.name).to.equal('Sibby Dawidowitsch')
+    })
+
+    it('should have a type', () => {
+      expect(traveler1.type).to.equal('relaxer')
+      expect(traveler3.type).to.equal('shopper')
+    })
+
+    it('should start off with no data by default', ()=> {
+      expect(traveler1.allTrips).to.eql([])
+      expect(traveler1.past).to.eql([])
+      expect(traveler1.present).to.eql([])
+      expect(traveler1.upcoming).to.eql([])
+      expect(traveler1.pending).to.eql([])
+    })
+
+    it('should start off with0 annual cost data as default', ()=> {
+        expect(traveler1.annualCost).to.equal(0)
+    })
+
+  })
+  
+  describe('Traveler methods', () => {
+      it('should return the travelers first name', () => {
+      expect(traveler1.returnFirstName()).to.equal('Ham')
+      expect(traveler3.returnFirstName()).to.equal('Sibby')
+    })
+
+    it('should have list of the travelers trips', () => {
+      traveler1.getAllTrips(tripsData);
+      expect(traveler1.allTrips.length).to.be.equal(2);
+
+      traveler3.getAllTrips(tripsData);
+      expect(traveler3.allTrips.length).to.be.equal(3);
+    })
+
+    it('should have list of the travelers past trips', () => {
+        traveler1.getAllTrips(tripsData);
+        traveler1.getPastTrips('2020-10-25')
+        expect(traveler1.past.length).to.be.equal(1)
+
+
+        traveler3.getAllTrips(tripsData);
+        traveler3.getPastTrips('2021-08-01')
+        expect(traveler3.past.length).to.be.equal(3)
+    })
+
+    it('should have list of the travelers current trips', () => {
+      traveler1.getAllTrips(tripsData);
+      traveler1.getCurrentTrips('2020-10-25');
+      expect(traveler1.present.length).to.be.equal(0)
+
+      traveler3.getAllTrips(tripsData);
+      traveler3.getCurrentTrips("2020-09-20");
+      expect(traveler3.present.length).to.be.equal(1)
+    })
+
+    it('should have list of the travelers upcoming trips', () => {
+        traveler1.getAllTrips(tripsData);
+        traveler1.getUpcomingTrips('2020-10-03')
+        expect(traveler1.upcoming.length).to.be.equal(2)
+
+
+        traveler3.getAllTrips(tripsData);
+        traveler3.getUpcomingTrips('2020-09-18')
+        expect(traveler3.upcoming.length).to.be.equal(1)
+    })
+
+    it('should have list of the travelers pending trips', () => {
+      traveler1.getAllTrips(tripsData);
+      traveler1.getPendingTrips();
+      expect(traveler1.pending.length).to.be.equal(1)
+
+      traveler3.getAllTrips(tripsData);
+      traveler3.getPendingTrips();
+      expect(traveler3.pending.length).to.be.equal(2)
+    })
+
+    it('should calculate the total amount the traveler spent yearly', () => {
+      traveler1.getAllTrips(tripsData);
+      traveler1.calcAnnualSpending('2020-09-18')
+      expect(traveler1.annualCost).to.be.equal(3586)
+
+      traveler3.getAllTrips(tripsData);
+      traveler3.calcAnnualSpending('2020-09-18')
+      expect(traveler3.annualCost).to.be.equal(12166)
+    })
+  })
+})
