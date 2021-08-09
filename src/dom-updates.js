@@ -23,6 +23,11 @@ changePageView() {
     welcomeName.innerText = `${firstName}!`;
   },
 
+  displayAnnualCosts(totalCost) {
+    const totalDisplay = document.getElementById('totalAmount');
+    totalDisplay.innerText = `$${totalCost}`;
+  },
+
 }
 
 export default domUpdates;

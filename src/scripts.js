@@ -13,7 +13,7 @@ import Trip from './Trip.js';
 
 
 // global var
-let currentDate = getRandomDate();
+let currentDate = '2020-02-12';
 let currentTraveler;
 let allDestinations, allTravelers, allTrips;
 
@@ -64,6 +64,7 @@ function checkLogin(event) {
 
 function createTraveler(user) {
    currentTraveler = new Traveler(user)
+   currentTraveler.getAllTrips(allTrips);
 }
 
 function evaluateInput(username) {
@@ -79,5 +80,6 @@ function evaluateInput(username) {
 
 function displayUserInfo(traveler) {
     domUpdates.changePageView();
-    domUpdates.welcomeUser(traveler);
+    domUpdates.welcomeUserName(traveler);
+    domUpdates.displayAnnualCosts(traveler.calcAnnualSpending(currentDate, allDestinations));
 }
