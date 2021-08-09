@@ -2,6 +2,7 @@ import chai from 'chai';
 const expect = chai.expect;
 
 import Traveler from '../src/Traveler';
+import destinationData from './test-data/destination-data';
 import travelersData from './test-data/travelers-data';
 import tripsData from './test-data/trips-data';
 
@@ -108,11 +109,11 @@ describe('Trip', () => {
 
     it('should calculate the total amount the traveler spent yearly', () => {
       traveler1.getAllTrips(tripsData);
-      traveler1.calcAnnualSpending('2020-09-18')
+      traveler1.calcAnnualSpending('2020-09-18', destinationData)
       expect(traveler1.annualCost).to.be.equal(3586)
 
       traveler3.getAllTrips(tripsData);
-      traveler3.calcAnnualSpending('2020-09-18')
+      traveler3.calcAnnualSpending('2020-09-18', destinationData)
       expect(traveler3.annualCost).to.be.equal(12166)
     })
   })

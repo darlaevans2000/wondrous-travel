@@ -30,25 +30,24 @@ const apiCalls = {
       })
   },
 
-     getTravelerData(userID) {
+    getSingleTraveler(userID) {
     return fetch(`http://localhost:3001/api/v1/travelers/${userID}`)
       .then(response => 
         response.json()
       )
-      .then(data => {
-        return data
-      })
-  }, 
+      .then(singleTravelerData => {
+          return singleTravelerData
+    })
+  },
 
   getAllData(userID) {
-    return Promise.all([ apiCalls.getAllTravelers(), apiCalls.getAllTrips(), apiCalls.getAllDestinations(), apiCalls.getTravelerData(userID) ])
-      .then(data => {
-        return data;
+    let promises = [ apiCalls.getAllTravelers(), apiCalls.getAllTrips(), apiCalls.getAllDestinations(),  apiCalls.getSingleTraveler(userID)];
+    return Promise.all(promises)
+      .then(values => {
+        return values;
       })
       .catch(error => console.log(`${error}: Error retrieving all data`));
   }
-
-
 }
 
 export default apiCalls;
