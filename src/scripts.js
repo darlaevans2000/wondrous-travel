@@ -37,6 +37,7 @@ currentTripsBtn.addEventListener('click', showCurrentTripsPage)
 upcomingTripsBtn.addEventListener('click', showUpcomingTripsPage)
 previousTripsBtn.addEventListener('click', showPastTripsPage)
 pendingTripsBtn.addEventListener('click', showPendingTripsPage)
+allTripsBtn.addEventListener('click', showAllTrips)
 
 function retrieveAllData() {
   apiCalls.getAllData(1)
@@ -118,4 +119,9 @@ function showPendingTripsPage() {
     currentTraveler.getPendingTrips()
     domUpdates.displayNewTitle('Pending Trips')
     domUpdates.displayAllTripCards(currentTraveler.pending, allDestinations)
+}
+
+function showAllTrips() {
+    domUpdates.displayNewTitle('My Trips')
+    domUpdates.displayAllTripCards(currentTraveler.allTrips, allDestinations)
 }
