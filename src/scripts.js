@@ -35,6 +35,7 @@ window.addEventListener('load', retrieveAllData);
 loginButton.addEventListener('click', checkLogin);
 currentTripsBtn.addEventListener('click', showCurrentTripsPage)
 upcomingTripsBtn.addEventListener('click', showUpcomingTripsPage)
+previousTripsBtn.addEventListener('click', showPastTripsPage)
 
 function retrieveAllData() {
   apiCalls.getAllData(1)
@@ -104,4 +105,10 @@ function showUpcomingTripsPage() {
     currentTraveler.getUpcomingTrips(currentDate)
     domUpdates.displayNewTitle('Upcoming Trips')
     domUpdates.displayAllTripCards(currentTraveler.upcoming, allDestinations)
+}
+
+function showPastTripsPage() {
+    currentTraveler.getPastTrips(currentDate)
+    domUpdates.displayNewTitle('Past Trips')
+    domUpdates.displayAllTripCards(currentTraveler.past, allDestinations)
 }
