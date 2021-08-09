@@ -81,6 +81,7 @@ function evaluateInput(username) {
 function displayUserInfo(traveler) {
     domUpdates.changePageView(currentDate);
     domUpdates.welcomeUserName(traveler);
+    domUpdates.makeDestinationSelections(allDestinations);
     domUpdates.displayAnnualCosts(traveler.calcAnnualSpending(currentDate, allDestinations));
     domUpdates.displayAllTripCards(traveler.allTrips, allDestinations)
 }

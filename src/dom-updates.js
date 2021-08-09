@@ -26,7 +26,17 @@ changePageView(date) {
     const firstName = user.returnFirstName();
     welcomeName.innerText = `${firstName}!`;
   },
-  
+
+  makeDestinationSelections(allDestinations) {
+    let menu = document.getElementById("destinationMenu");
+
+   allDestinations.sort((a, b) => a.destination.localeCompare(b.destination))
+
+    allDestinations.forEach(destination => {
+      menu.innerHTML += `<option value="${destination.id}">${destination.destination}</option>`;
+    })
+  },
+
   displayAnnualCosts(totalCost) {
     const totalDisplay = document.getElementById('totalAmount');
     totalDisplay.innerText = `$${totalCost}`;
