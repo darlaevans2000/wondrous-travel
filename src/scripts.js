@@ -6,9 +6,11 @@ import './images/logo.png'
 import './images/background.png'
 import './css/base.scss';
 
+import domUpdates from './dom-updates.js';
 import apiCalls from './apiCalls.js';
 import Traveler from './Traveler.js';
 import Trip from './Trip.js';
+
 
 // global var
 let currentDate = getRandomDate();
@@ -22,7 +24,7 @@ let loginError = document.getElementById('loginError');
 const loginButton = document.getElementById('loginBtn');
 
 // event listeners
-// window.addEventListener('load', retrieveAllData);
+window.addEventListener('load', retrieveAllData);
 
 loginButton.addEventListener('click', checkLogin);
 
@@ -53,15 +55,10 @@ function checkLogin(event) {
   if (passwordInput.value !== 'travel2020' || !passwordInput.value || !username || username.length < 9) {
     loginError.classList.remove('hidden');
   } else {
-    loginError.classList.add('hidden');
-    retrieveAllData()
     let userParam = evaluateInput(usernameInput.value)
     createTraveler(userParam);
     console.log(currentTraveler)
-    // displayUser();
-    // loginContainer.classList.add('hidden');
-    // allContainer.classList.remove('hidden');
-    // greetingContainer.classList.remove('hidden');
+    displayUserInfo(currentTraveler);
   }
 }
 
@@ -78,4 +75,9 @@ function evaluateInput(username) {
   });
 
   return user;
+}
+
+function displayUserInfo(traveler) {
+    domUpdates.changePageView();
+    domUpdates.welcomeUser(traveler);
 }
