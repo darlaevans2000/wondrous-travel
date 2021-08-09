@@ -40,6 +40,7 @@ class Trip {
 }
 
     estimateTotalTripCost() {
+    // this.getDestinationInfo(destinationData)
     let total = 0;
     total += this.destination.estimatedLodgingCostPerDay * this.duration
     total += this.destination.estimatedFlightCostPerPerson * this.travelers

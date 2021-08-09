@@ -62,16 +62,20 @@ class Traveler {
     })
   }
 
-  calcAnnualSpending(currentDate) {
+  calcAnnualSpending(currentDate, data) {
     let currentYear = dayjs(currentDate).year();
-    this.allTrips.reduce((total, trip) => {
+    let tripArr = this.allTrips.filter(trip => {
+      trip.getDestinationInfo(data);
       let tripYear = dayjs(trip.startDate).year();
-      if (tripYear === currentYear) {
-        trip.getDestinationInfo(destinationData)
+      if(tripYear === currentYear) {
+        return trip
+      }
+    })
+    return tripArr.reduce((total, trip) => {
         trip.estimateTotalTripCost();
         total += trip.cost;
         return this.annualCost = total;
-      }
+        // console.log(total)
     }, 0);
   }
 }
