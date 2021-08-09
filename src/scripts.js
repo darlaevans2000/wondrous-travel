@@ -34,6 +34,7 @@ window.addEventListener('load', retrieveAllData);
 
 loginButton.addEventListener('click', checkLogin);
 currentTripsBtn.addEventListener('click', showCurrentTripsPage)
+upcomingTripsBtn.addEventListener('click', showUpcomingTripsPage)
 
 function retrieveAllData() {
   apiCalls.getAllData(1)
@@ -93,7 +94,14 @@ function displayUserInfo(traveler) {
 }
 
 function showCurrentTripsPage() {
+    // this does not return the trip if the 'start date' is the current date! FIX!!!
     currentTraveler.getCurrentTrips(currentDate)
     domUpdates.displayNewTitle('Current Trips')
     domUpdates.displayAllTripCards(currentTraveler.present, allDestinations)
+}
+
+function showUpcomingTripsPage() {
+    currentTraveler.getUpcomingTrips(currentDate)
+    domUpdates.displayNewTitle('Upcoming Trips')
+    domUpdates.displayAllTripCards(currentTraveler.upcoming, allDestinations)
 }
