@@ -1,4 +1,4 @@
-// imports
+// IMPORTS
 import * as dayjs from 'dayjs'
 var isBetween = require('dayjs/plugin/isBetween')
 dayjs.extend(isBetween)
@@ -7,32 +7,26 @@ import './images/background.png'
 import './css/base.scss';
 
 import apiCalls from './apiCalls.js';
-
 import Traveler from './Traveler.js';
 import Trip from './Trip.js';
 
-// global variables
+// GLOBAL VARIABLES
 
 let currentDate = getRandomDate();
-
-
+let user, currentTraveler;
+let randomID = Math.floor(Math.random() * (50 - 1 + 1)) + 1;
 let allDestinations, allTravelers, allTrips;
-
-
 
 window.addEventListener('load', retrieveAllData);
 
 
 function retrieveAllData() {
-  apiCalls.getAllData()
+  apiCalls.getAllData(randomID)
     .then(allData => {
       allTravelers = allData[0];
-      console.log(allTravelers)
       allTrips = allData[1];
-      console.log(allTrips)
       allDestinations = allData[2];
-      console.log(allDestinations)
-      console.log(currentDate)
+      currentTraveler = new Traveler(allData[3]);
     })
 }
 
