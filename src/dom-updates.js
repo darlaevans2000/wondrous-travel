@@ -30,7 +30,7 @@ changePageView(date) {
   makeDestinationSelections(allDestinations) {
     let menu = document.getElementById("destinationMenu");
 
-   allDestinations.sort((a, b) => a.destination.localeCompare(b.destination))
+    allDestinations.sort((a, b) => a.destination.localeCompare(b.destination))
 
     allDestinations.forEach(destination => {
       menu.innerHTML += `<option value="${destination.id}">${destination.destination}</option>`;
