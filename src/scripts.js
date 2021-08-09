@@ -13,7 +13,7 @@ import Trip from './Trip.js';
 
 
 // global var
-let currentDate = '2020-02-12';
+let currentDate = '2021-01-16';
 let currentTraveler;
 let allDestinations, allTravelers, allTrips;
 
@@ -23,11 +23,17 @@ let passwordInput = document.getElementById('password');
 let loginError = document.getElementById('loginError');
 const loginButton = document.getElementById('loginBtn');
 
+const allTripsBtn = document.getElementById('allTripsBtn');
+const currentTripsBtn = document.getElementById('currentTripsBtn');
+const upcomingTripsBtn = document.getElementById('upcomingTripsBtn');
+const previousTripsBtn = document.getElementById('previousTripsBtn');
+const pendingTripsBtn = document.getElementById('pendingTripsBtn');
+
 // event listeners
 window.addEventListener('load', retrieveAllData);
 
 loginButton.addEventListener('click', checkLogin);
-
+currentTripsBtn.addEventListener('click', showCurrentTripsPage)
 
 function retrieveAllData() {
   apiCalls.getAllData(1)
@@ -84,4 +90,10 @@ function displayUserInfo(traveler) {
     domUpdates.makeDestinationSelections(allDestinations);
     domUpdates.displayAnnualCosts(traveler.calcAnnualSpending(currentDate, allDestinations));
     domUpdates.displayAllTripCards(traveler.allTrips, allDestinations)
+}
+
+function showCurrentTripsPage() {
+    currentTraveler.getCurrentTrips(currentDate)
+    domUpdates.displayNewTitle('Current Trips')
+    domUpdates.displayAllTripCards(currentTraveler.present, allDestinations)
 }

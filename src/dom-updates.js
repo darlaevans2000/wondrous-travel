@@ -85,6 +85,11 @@ changePageView(date) {
     }
   },
 
+  displayNewTitle(text) {
+    const gridTitle = document.getElementById('gridTitle');
+    gridTitle.innerText = text;
+  },
+
 }
 
 export default domUpdates;
