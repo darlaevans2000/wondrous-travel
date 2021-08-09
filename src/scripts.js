@@ -36,6 +36,7 @@ loginButton.addEventListener('click', checkLogin);
 currentTripsBtn.addEventListener('click', showCurrentTripsPage)
 upcomingTripsBtn.addEventListener('click', showUpcomingTripsPage)
 previousTripsBtn.addEventListener('click', showPastTripsPage)
+pendingTripsBtn.addEventListener('click', showPendingTripsPage)
 
 function retrieveAllData() {
   apiCalls.getAllData(1)
@@ -111,4 +112,10 @@ function showPastTripsPage() {
     currentTraveler.getPastTrips(currentDate)
     domUpdates.displayNewTitle('Past Trips')
     domUpdates.displayAllTripCards(currentTraveler.past, allDestinations)
+}
+
+function showPendingTripsPage() {
+    currentTraveler.getPendingTrips()
+    domUpdates.displayNewTitle('Pending Trips')
+    domUpdates.displayAllTripCards(currentTraveler.pending, allDestinations)
 }
