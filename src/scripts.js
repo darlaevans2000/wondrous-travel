@@ -14,7 +14,7 @@ import destinationData from '../test/test-data/destination-data'
 
 
 // global var
-let currentDate = '2021-01-15';
+let currentDate = '2021-08-15';
 let currentTraveler;
 let allDestinations, allTravelers, allTrips;
 
@@ -114,7 +114,6 @@ function displayUserInfo(traveler) {
 }
 
 function showCurrentTripsPage() {
-    // this does not return the trip if the 'start date' is the current date! FIX!!!
     domUpdates.displayTrips(currentTraveler.present, cardGrid, "My Current Trips", allDestinations)
 }
 

@@ -59,62 +59,72 @@ describe('Trip', () => {
 
     it('should have list of the travelers trips', () => {
       traveler1.getAllTrips(tripsData);
-      expect(traveler1.allTrips.length).to.be.equal(2);
+      expect(traveler1.allTrips.length).to.equal(2);
 
       traveler3.getAllTrips(tripsData);
-      expect(traveler3.allTrips.length).to.be.equal(3);
+      expect(traveler3.allTrips.length).to.equal(3);
     })
 
     it('should have list of the travelers past trips', () => {
         traveler1.getAllTrips(tripsData);
         traveler1.getPastTrips('2020-10-25')
-        expect(traveler1.past.length).to.be.equal(1)
+        expect(traveler1.past.length).to.equal(2)
 
 
         traveler3.getAllTrips(tripsData);
         traveler3.getPastTrips('2021-08-01')
-        expect(traveler3.past.length).to.be.equal(3)
+        expect(traveler3.past.length).to.equal(3)
     })
 
     it('should have list of the travelers current trips', () => {
       traveler1.getAllTrips(tripsData);
       traveler1.getCurrentTrips('2020-10-25');
-      expect(traveler1.present.length).to.be.equal(0)
+      expect(traveler1.present.length).to.equal(0)
 
       traveler3.getAllTrips(tripsData);
       traveler3.getCurrentTrips("2020-09-20");
-      expect(traveler3.present.length).to.be.equal(1)
+      expect(traveler3.present.length).to.equal(1)
+    })
+
+    it('should have trip in current trips even if start date is current date', () => {
+      traveler1.getAllTrips(tripsData);
+      traveler1.getCurrentTrips('2020-02-10');
+      expect(traveler1.present.length).to.equal(1)
+
+      traveler3.getAllTrips(tripsData);
+      traveler3.getCurrentTrips("2020-09-20");
+      expect(traveler3.present.length).to.equal(1)
     })
 
     it('should have list of the travelers upcoming trips', () => {
         traveler1.getAllTrips(tripsData);
-        traveler1.getUpcomingTrips('2020-10-03')
-        expect(traveler1.upcoming.length).to.be.equal(2)
+        traveler1.getUpcomingTrips('2020-01-01')
+        expect(traveler1.upcoming.length).to.equal(2)
 
 
         traveler3.getAllTrips(tripsData);
         traveler3.getUpcomingTrips('2020-09-18')
-        expect(traveler3.upcoming.length).to.be.equal(1)
+        expect(traveler3.upcoming.length).to.equal(1)
     })
 
     it('should have list of the travelers pending trips', () => {
       traveler1.getAllTrips(tripsData);
       traveler1.getPendingTrips();
-      expect(traveler1.pending.length).to.be.equal(1)
+      expect(traveler1.pending.length).to.equal(1)
 
       traveler3.getAllTrips(tripsData);
       traveler3.getPendingTrips();
-      expect(traveler3.pending.length).to.be.equal(2)
+      expect(traveler3.pending.length).to.equal(2)
     })
 
-    it('should calculate the total amount the traveler spent yearly', () => {
+    it('should calculate the total amount the traveler spent yearly on approved trips ONLY', () => {
       traveler1.getAllTrips(tripsData);
       traveler1.calcAnnualSpending('2020-09-18', destinationData)
-      expect(traveler1.annualCost).to.be.equal(3586)
+      expect(traveler1.annualCost).to.equal(2882)
 
       traveler3.getAllTrips(tripsData);
       traveler3.calcAnnualSpending('2020-09-18', destinationData)
-      expect(traveler3.annualCost).to.be.equal(12166)
+      expect(traveler3.annualCost).to.equal(3663)
     })
   })
 })
