@@ -67,7 +67,7 @@ class Traveler {
     let tripArr = this.allTrips.filter(trip => {
       trip.getDestinationInfo(data);
       let tripYear = dayjs(trip.startDate).year();
-      if(tripYear === currentYear) {
+      if(tripYear === currentYear && trip.status === 'approved') {
         return trip
       }
     })

@@ -68,7 +68,7 @@ describe('Trip', () => {
     it('should have list of the travelers past trips', () => {
         traveler1.getAllTrips(tripsData);
         traveler1.getPastTrips('2020-10-25')
-        expect(traveler1.past.length).to.be.equal(1)
+        expect(traveler1.past.length).to.be.equal(2)
 
 
         traveler3.getAllTrips(tripsData);
@@ -88,7 +88,7 @@ describe('Trip', () => {
 
     it('should have list of the travelers upcoming trips', () => {
         traveler1.getAllTrips(tripsData);
-        traveler1.getUpcomingTrips('2020-10-03')
+        traveler1.getUpcomingTrips('2020-01-01')
         expect(traveler1.upcoming.length).to.be.equal(2)
 
 
@@ -107,14 +107,14 @@ describe('Trip', () => {
       expect(traveler3.pending.length).to.be.equal(2)
     })
 
-    it('should calculate the total amount the traveler spent yearly', () => {
+    it('should calculate the total amount the traveler spent yearly on approved trips ONLY', () => {
       traveler1.getAllTrips(tripsData);
       traveler1.calcAnnualSpending('2020-09-18', destinationData)
-      expect(traveler1.annualCost).to.be.equal(3586)
+      expect(traveler1.annualCost).to.be.equal(2882)
 
       traveler3.getAllTrips(tripsData);
       traveler3.calcAnnualSpending('2020-09-18', destinationData)
-      expect(traveler3.annualCost).to.be.equal(12166)
+      expect(traveler3.annualCost).to.be.equal(3663)
     })
   })
 })
