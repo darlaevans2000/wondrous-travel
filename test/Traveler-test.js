@@ -86,6 +86,16 @@ describe('Trip', () => {
       expect(traveler3.present.length).to.be.equal(1)
     })
 
+    it('should have trip in current trips even if start date is current date', () => {
+      traveler1.getAllTrips(tripsData);
+      traveler1.getCurrentTrips('2020-02-10');
+      expect(traveler1.present.length).to.equal(1)
+
+      traveler3.getAllTrips(tripsData);
+      traveler3.getCurrentTrips("2020-09-20");
+      expect(traveler3.present.length).to.equal(1)
+    })
+
     it('should have list of the travelers upcoming trips', () => {
         traveler1.getAllTrips(tripsData);
         traveler1.getUpcomingTrips('2020-01-01')
