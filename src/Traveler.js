@@ -32,7 +32,7 @@ class Traveler {
 
   getCurrentTrips(currentDate) {
     return this.allTrips.filter(trip => {
-      if(dayjs(currentDate).isBetween(trip.startDate, trip.endDate)) {
+      if(dayjs(currentDate).isBetween(trip.startDate, trip.endDate) || currentDate === trip.startDate) {
         return this.present.push(trip);
       }
     });
@@ -71,11 +71,12 @@ class Traveler {
         return trip
       }
     })
+    
     return tripArr.reduce((total, trip) => {
         trip.estimateTotalTripCost();
         total += trip.cost;
         return this.annualCost = total;
-        // console.log(total)
+        console.log(total)
     }, 0);
   }
 }
