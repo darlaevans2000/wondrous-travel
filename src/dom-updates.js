@@ -28,12 +28,12 @@ changePageView(date) {
   },
 
   makeDestinationSelections(allDestinations) {
-    let menu = document.getElementById("destinationMenu");
+    let destinationInput = document.getElementById("destinationMenu");
 
     allDestinations.sort((a, b) => a.destination.localeCompare(b.destination))
 
     allDestinations.forEach(destination => {
-      menu.innerHTML += `<option value="${destination.id}">${destination.destination}</option>`;
+      destinationInput.innerHTML += `<option value="${destination.id}">${destination.destination}</option>`;
     })
   },
 
@@ -42,19 +42,31 @@ changePageView(date) {
     totalDisplay.innerText = `$${totalCost}`;
   },
 
-  displayAllTripCards(userTrips, allDestinations) {
-    let cardGrid = document.getElementById('cardGrid');
-    cardGrid.innerHTML = '';
+ displayTrips(trips, tripCardsSection, bannerMessage, allDestinations) {
+    this.displayTripCardsBanner(trips, tripCardsSection, bannerMessage, allDestinations)
+  },
 
-    const sortedTrips = userTrips.sort((a, b) => {
-       return dayjs(b.startDate).year() - dayjs(a.startDate).year()
-    });
+  displayTripCardsBanner(trips, tripCardsSection, bannerMessage, allDestinations) {
+    let banner = document.getElementById('gridTitle');
+    if (trips.length === 0) {
+      tripCardsSection.innerHTML = ``
+      banner.innerHTML =
+      `<h2>No Trips to See Here! Book a Trip above to start planning your next adventure.</h2>`
+    } else {
+      banner.innerHTML =
+      `<h2>${bannerMessage}</h2>`
+      this.displayTripCards(trips, tripCardsSection, allDestinations)
+    }
+  },
 
-    if (userTrips.length > 0) {
-      sortedTrips.forEach(trip => {
-        trip.getDestinationInfo(allDestinations);
+  displayTripCards(trips, tripCardsSection, allDestinations) {
+    tripCardsSection.innerHTML = ``
+    let sortedTrips = trips.sort((a, b) => (dayjs(b.date).isAfter(dayjs(a.date)) ? 1 : -1))
+
+    sortedTrips.forEach(trip => {
         trip.getPrettyFormatDates();
-        let tripCard = 
+        trip.getDestinationInfo(allDestinations);
+        tripCardsSection.innerHTML += 
           `<article class="card">
             <section class="card-top" aria-label="[photograph of ${trip.destination.destination}]" style="background-image: url(${trip.destination.image})">
             </section>
@@ -78,16 +90,27 @@ changePageView(date) {
               </div>
             </section>
           </article>`;
-        cardGrid.innerHTML += `${tripCard}`;
-      });
-    } else {
-      cardGrid.innerHTML = `<article class="no-results">You have no trips booked yet.</article>`;
-    }
+      })
   },
 
-  displayNewTitle(text) {
-    const gridTitle = document.getElementById('gridTitle');
-    gridTitle.innerText = text;
+    buildBookingMessage(newTrip) {
+    const bookingMessage = document.getElementById('bookingMessage'); 
+    let place = newTrip.destination;
+    let costString = newTrip.cost.toFixed(2).toString();
+
+    bookingMessage.innerHTML = `Congratulations, you've booked a trip to ${place.destination} for $${costString}!`;
+  },
+
+    buildCostMessage(cost) {
+    const bookingMessage = document.getElementById('bookingMessage'); 
+
+    bookingMessage.innerHTML = `The total cost of this trip would be $${cost}`;
+  },
+
+  buildErrorMessage() {
+    const bookingMessage = document.getElementById('bookingMessage'); 
+
+    bookingMessage.innerHTML = `Please provide all required booking information and a date after current date.`;
   },
 
 }

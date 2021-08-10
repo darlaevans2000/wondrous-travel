@@ -30,8 +30,8 @@ const apiCalls = {
       })
   },
 
-    getSingleTraveler(userID) {
-    return fetch(`http://localhost:3001/api/v1/travelers/${userID}`)
+    getSingleTraveler() {
+    return fetch(`http://localhost:3001/api/v1/travelers/1`)
       .then(response => 
         response.json()
       )
@@ -40,13 +40,28 @@ const apiCalls = {
     })
   },
 
-  getAllData(userID) {
-    let promises = [ apiCalls.getAllTravelers(), apiCalls.getAllTrips(), apiCalls.getAllDestinations(),  apiCalls.getSingleTraveler(userID)];
-    return Promise.all(promises)
-      .then(values => {
-        return values;
+    postNewTrip(tripData) {
+    return fetch('http://localhost:3001/api/v1/trips', {
+      method: 'POST',
+      body: JSON.stringify(tripData), 
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Sorry, we could not process your booking request.`);
+        }
+          return response.json()
       })
-      .catch(error => console.log(`${error}: Error retrieving all data`));
+      .then(this.getAllData())
+         .catch(err => console.log(err))
+  },
+
+  getAllData() {
+    return Promise.all([this.getAllTravelers(), this.getAllTrips(), this.getAllDestinations(), this.getSingleTraveler()])
+      .then(data => data)
+      .catch(err => console.log(err))
   }
 }
 
