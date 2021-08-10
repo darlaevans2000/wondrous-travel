@@ -99,7 +99,7 @@ describe('Trip', () => {
 
   })
 
-    it('should be able to retrieve start and end date of the trip in YYYY-MM-DD', () => {
+    it('should be able to retrieve start and end date of the trip in YYYY-MM-DD format', () => {
       trip1.getDates();
       trip3.getDates();
       expect(trip1.startDate).to.equal('2020-10-04')
