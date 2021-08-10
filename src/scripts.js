@@ -13,7 +13,7 @@ import Trip from './Trip.js';
 
 
 // global var
-let currentDate = '2020-11-21';
+let currentDate = dayjs().format('dddd, MMM D, YYYY');
 let currentTraveler;
 let allDestinations, allTravelers, allTrips;
 
@@ -84,7 +84,6 @@ function retrieveAllData(userID) {
       return true
     }
   }
-
 
 function checkLogin(event) {
   const usernameValue = usernameInput.value.trim()

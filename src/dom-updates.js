@@ -18,7 +18,7 @@ changePageView(date) {
     const currentDate = document.getElementById('currentDate');
     loginPage.classList.add('hidden');
     userPage.classList.remove('hidden');
-    currentDate.innerHTML += `Todays Date: ${date}`;
+    currentDate.innerHTML += `${date}`;
   },
 
   welcomeUserName(user) {
