@@ -30,14 +30,20 @@ const apiCalls = {
       })
   },
 
-    getSingleTraveler() {
-    return fetch(`http://localhost:3001/api/v1/travelers/1`)
+    getSingleTraveler(userID) {
+    return fetch(`http://localhost:3001/api/v1/travelers/${userID}`)
       .then(response => 
         response.json()
       )
       .then(singleTravelerData => {
           return singleTravelerData
     })
+  },
+
+    getAllData(userID) {
+    return Promise.all([this.getAllTravelers(), this.getAllTrips(), this.getAllDestinations(), this.getSingleTraveler(userID)])
+      .then(data => data)
+      .catch(err => console.log(err))
   },
 
     postNewTrip(tripData) {
@@ -56,12 +62,6 @@ const apiCalls = {
       })
       .then(this.getAllData())
          .catch(err => console.log(err))
-  },
-
-  getAllData() {
-    return Promise.all([this.getAllTravelers(), this.getAllTrips(), this.getAllDestinations(), this.getSingleTraveler()])
-      .then(data => data)
-      .catch(err => console.log(err))
   }
 }
 

@@ -10,28 +10,27 @@ import domUpdates from './dom-updates.js';
 import apiCalls from './apiCalls.js';
 import Traveler from './Traveler.js';
 import Trip from './Trip.js';
-import destinationData from '../test/test-data/destination-data'
 
 
 // global var
-let currentDate = '2021-08-15';
+let currentDate = dayjs().format('dddd, MMM D, YYYY');
 let currentTraveler;
 let allDestinations, allTravelers, allTrips;
 
 
-// qs
-let usernameInput = document.getElementById('username');
-let passwordInput = document.getElementById('password');
-let loginError = document.getElementById('loginError');
+// QS //
+//login
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const loginError = document.getElementById('loginError');
 const loginButton = document.getElementById('loginBtn');
-
+//nav
 const allTripsBtn = document.getElementById('allTripsBtn');
 const currentTripsBtn = document.getElementById('currentTripsBtn');
 const upcomingTripsBtn = document.getElementById('upcomingTripsBtn');
 const previousTripsBtn = document.getElementById('previousTripsBtn');
 const pendingTripsBtn = document.getElementById('pendingTripsBtn');
-// booking
-
+//booking
 const destinationInput = document.getElementById('destinationMenu');
 const startDateSelect = document.getElementById('startDateMenu');
 const durationInput = document.getElementById('durationInput');
@@ -40,9 +39,8 @@ const costButton = document.getElementById('costBtn');
 const bookButton = document.getElementById('bookBtn');
 const cardGrid = document.getElementById('cardGrid');
 const bookingForm = document.getElementById('bookingForm');
-// event listeners
-window.addEventListener('load', retrieveAllData);
 
+// event listeners
 loginButton.addEventListener('click', checkLogin);
 currentTripsBtn.addEventListener('click', showCurrentTripsPage)
 upcomingTripsBtn.addEventListener('click', showUpcomingTripsPage)
@@ -52,57 +50,66 @@ allTripsBtn.addEventListener('click', showAllTrips)
 costButton.addEventListener('click', estimateTripCost);
 bookButton.addEventListener('click', bookNewTrip);
 
-function retrieveAllData() {
-  apiCalls.getAllData()
+function retrieveAllData(userID) {
+  apiCalls.getAllData(userID)
     .then(data => {
       allTravelers = data[0];
-      console.log(allTravelers)
       allTrips = data[1];
-      console.log(allTrips)
       allDestinations = data[2];
-      console.log(allDestinations)
-      let singleTraveler = new Traveler(data[3])
-      console.log(singleTraveler)
+      currentTraveler = new Traveler(data[3])
+    createTraveler(currentTraveler);
+    displayUserInfo(currentTraveler);
     })
 }
 
-function getRandomDate() {
-    let start = new Date(2020, 0, 1)
-    let end = new Date(2022, 8, 6)
-    let newDate =  new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-    return dayjs(newDate).format('YYYY-MM-DD')
-}
+  function checkUsernameInput(letters, numbers) {
+    if ((letters !== 'traveler') ||
+      (numbers === undefined) ||
+      (numbers === '0') ||
+      (numbers === '00') ||
+      (parseInt(numbers) > 50)) {
+      loginError.classList.remove('hidden');
+      loginError.innerText = `Username or password does not match.`
+      return false
+    } else {
+      return true
+    }
+  }
+
+    function checkPasswordInput(passwordValue) {
+    if (passwordValue !== 'travel2020') {
+      loginError.classList.remove('hidden');
+      loginError.innerText = `Username or password does not match.`
+    } else {
+      return true
+    }
+  }
 
 function checkLogin(event) {
+  const usernameValue = usernameInput.value.trim()
+  const passwordValue = passwordInput.value.trim()
+  const splitName = usernameValue.split('')
+  const letters = splitName.slice(0, 8).join('')
+  const numbers = splitName.slice(8, 10).join('')
+  const userIDInput = parseInt(numbers)
+
+  let usernameResult = checkUsernameInput(letters, numbers);
+  let passwordResult = checkPasswordInput(passwordValue);
+
   event.preventDefault();
-  if (passwordInput.value !== 'travel2020' || !passwordInput.value || !usernameInput.value || usernameInput.length < 9) {
+  if (usernameResult === false || passwordResult === false) {
     loginError.classList.remove('hidden');
   } else {
-    let userParam = evaluateInput(usernameInput.value)
-    createTraveler(userParam);
-    console.log(currentTraveler)
-    displayUserInfo(currentTraveler);
+    retrieveAllData(userIDInput)
   }
 }
 
 function createTraveler(user) {
-   currentTraveler = new Traveler(user)
    currentTraveler.getAllTrips(allTrips);
    currentTraveler.getCurrentTrips(currentDate)
    currentTraveler.getUpcomingTrips(currentDate)
    currentTraveler.getPastTrips(currentDate)
    currentTraveler.getPendingTrips()
-}
-
-function evaluateInput(username) {
-  let splitInput = username.split('');
-  let joinedNum = parseInt(splitInput[8] + splitInput[9]);
-
-  let user = allTravelers.find(traveler => {
-    return traveler.id === joinedNum;
-  });
-
-  return user;
 }
 
 function displayUserInfo(traveler) {
@@ -134,7 +141,6 @@ function showAllTrips() {
 }
 
 //post new trip 
-
 function testTripInputs(newTripData) {
   if (newTripData.date === '' || !newTripData.duration || !newTripData.travelers || newTripData.destinationID <= 0 || dayjs(newTripData.date).isBefore(currentDate)) {
     return false;
@@ -158,7 +164,6 @@ function makePostTripObject() {
     "status": "pending",
     "suggestedActivities": []
   };
-console.log(newTripObject)
   return newTripObject;
 }
 
@@ -195,8 +200,5 @@ function bookNewTrip() {
         bookingForm.reset();
         apiCalls.getAllData()
         retrieveAllData()
-        // console.log(currentTraveler.allTrips)
-        // domUpdates.displayAnnualCosts(currentTraveler.annualCost);
-        // console.log(currentTraveler.annualCost)
   }
 }
