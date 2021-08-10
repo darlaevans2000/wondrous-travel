@@ -77,12 +77,12 @@
         </div>
         <div class="selection">
         <label for="durationInput">Duration of trip:
-          <input required name="duration-input" id="durationInput" type="number" min="1" placeholder="number of nights">
+          <input required name="duration-input" id="durationInput" type="number" oninput="this.value=(parseInt(this.value)||0)" min="1" step='1' placeholder="number of nights">
         </label>
         </div>
         <div class="selection">
           <label for="travelersInput">Number of travelers:
-            <input required name="travelers-input" id="travelersInput" type="number" min="1">
+            <input required name="travelers-input" id="travelersInput" type="number" oninput="this.value=(parseInt(this.value)||0)" min="1" step='1' placeholder="number of travelers">
           </label>
         </div>
         <div class="booking-btns">
@@ -90,6 +90,7 @@
           <button id="bookBtn" type="button" name="button">Book Trip</button>
         </div>
       </form>
+      <h2 id="bookingMessage"></h2>
     </section>
     <main>
       <div class="main-container">
