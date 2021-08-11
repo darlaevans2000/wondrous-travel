@@ -22,7 +22,6 @@ let allDestinations, allTravelers, allTrips;
 //login
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
-const loginError = document.getElementById('loginError');
 const loginButton = document.getElementById('loginBtn');
 //nav
 const allTripsBtn = document.getElementById('allTripsBtn');
@@ -32,7 +31,7 @@ const previousTripsBtn = document.getElementById('previousTripsBtn');
 const pendingTripsBtn = document.getElementById('pendingTripsBtn');
 //booking
 const destinationInput = document.getElementById('destinationMenu');
-const startDateSelect = document.getElementById('startDateMenu');
+const startDateInput = document.getElementById('startDateMenu');
 const durationInput = document.getElementById('durationInput');
 const travelersInput = document.getElementById('travelersInput');
 const costButton = document.getElementById('costBtn');
@@ -63,13 +62,10 @@ function retrieveAllData(userID) {
 }
 
 function checkUsernameInput(letters, numbers) {
-  if ((letters !== 'traveler') ||
-    (numbers === undefined) ||
+  if ((numbers === undefined) ||
     (numbers === '0') ||
     (numbers === '00') ||
     (parseInt(numbers) > 50)) {
-    loginError.classList.remove('hidden');
-    loginError.innerText = `Username or password does not match.`
     return false
   } else {
     return true
@@ -78,8 +74,7 @@ function checkUsernameInput(letters, numbers) {
 
 function checkPasswordInput(passwordValue) {
   if (passwordValue !== 'travel2020') {
-    loginError.classList.remove('hidden');
-    loginError.innerText = `Username or password does not match.`
+    return false
   } else {
     return true
   }
@@ -97,9 +92,13 @@ function checkLogin(event) {
   let passwordResult = checkPasswordInput(passwordValue);
 
   event.preventDefault();
-  if (usernameResult === false || passwordResult === false) {
-    loginError.classList.remove('hidden');
-  } else if (usernameResult === true && passwordResult === true){
+  if (usernameResult === false && passwordResult === false) {
+    domUpdates.buildLoginErrorMessage('both')
+  } else if (usernameResult === false && passwordResult === true) {
+    domUpdates.buildLoginErrorMessage('username')
+  } else if (usernameResult === true && passwordResult === false) {
+    domUpdates.buildLoginErrorMessage('password')
+  } else if (usernameResult === true && passwordResult === true) {
     retrieveAllData(userIDInput)
   }
 }
@@ -149,7 +148,7 @@ function testTripInputs(newTripData) {
 }
 
 function makePostTripObject() {
-  let startDate = dayjs(startDateSelect.value).format('YYYY/MM/DD');
+  let startDate = dayjs(startDateInput.value).format('YYYY/MM/DD');
   let numDays = parseInt(durationInput.value);
   let numTravelers = parseInt(travelersInput.value);
   let destID = parseInt(destinationInput.value);
