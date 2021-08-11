@@ -99,7 +99,7 @@ function checkLogin(event) {
   event.preventDefault();
   if (usernameResult === false || passwordResult === false) {
     loginError.classList.remove('hidden');
-  } else {
+  } else if (usernameResult === true && passwordResult === true){
     retrieveAllData(userIDInput)
   }
 }

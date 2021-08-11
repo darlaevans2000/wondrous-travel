@@ -1,15 +1,7 @@
 import * as dayjs from 'dayjs'
 var isBetween = require('dayjs/plugin/isBetween')
 dayjs.extend(isBetween)
-import './images/logo.png'
-import './images/background.png'
-import './css/base.scss';
 
-import apiCalls from './apiCalls.js';
-import Traveler from './Traveler.js';
-import Trip from './Trip.js';
-
-// let currentDate = '2020-02-12';
 
 let domUpdates = {
   changePageView(date) {
