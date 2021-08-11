@@ -40,6 +40,8 @@ const cardGrid = document.getElementById('cardGrid');
 const bookingForm = document.getElementById('bookingForm');
 
 // event listeners
+window.addEventListener('load', retrieveAllData);
+loginButton.addEventListener('click', checkLogin);
 loginButton.addEventListener('click', checkLogin);
 currentTripsBtn.addEventListener('click', showCurrentTripsPage)
 upcomingTripsBtn.addEventListener('click', showUpcomingTripsPage)
@@ -49,19 +51,26 @@ allTripsBtn.addEventListener('click', showAllTrips)
 costButton.addEventListener('click', estimateTripCost);
 bookButton.addEventListener('click', bookNewTrip);
 
-function retrieveAllData(userID) {
-  apiCalls.getAllData(userID)
+function retrieveAllData() {
+  apiCalls.getAllData()
     .then(data => {
       allTravelers = data[0];
       allTrips = data[1];
       allDestinations = data[2];
-      currentTraveler = new Traveler(data[3])
-      createTraveler(currentTraveler);
-      displayUserInfo(currentTraveler);
+
+    })
+  }
+
+function retrieveSingleTraveler(userID) {
+  apiCalls.getSingleTravelerData(userID)
+    .then(data => {
+    currentTraveler = new Traveler(data[0])
+    createTraveler(currentTraveler);
+    displayUserInfo(currentTraveler);
     })
 }
 
-function checkUsernameInput(letters, numbers) {
+function checkUsernameInput(numbers) {
   if ((numbers === undefined) ||
     (numbers === '0') ||
     (numbers === '00') ||
@@ -84,11 +93,10 @@ function checkLogin(event) {
   const usernameValue = usernameInput.value.trim()
   const passwordValue = passwordInput.value.trim()
   const splitName = usernameValue.split('')
-  const letters = splitName.slice(0, 8).join('')
   const numbers = splitName.slice(8, 10).join('')
   const userIDInput = parseInt(numbers)
 
-  let usernameResult = checkUsernameInput(letters, numbers);
+  let usernameResult = checkUsernameInput(numbers);
   let passwordResult = checkPasswordInput(passwordValue);
 
   event.preventDefault();
@@ -99,7 +107,7 @@ function checkLogin(event) {
   } else if (usernameResult === true && passwordResult === false) {
     domUpdates.buildLoginErrorMessage('password')
   } else if (usernameResult === true && passwordResult === true) {
-    retrieveAllData(userIDInput)
+    retrieveSingleTraveler(userIDInput)
   }
 }
 
@@ -184,6 +192,8 @@ function bookNewTrip() {
   let newTripData = makePostTripObject();
   let newTripInstance = new Trip(newTripData);
   let inputTest = testTripInputs(newTripData);
+  let id = currentTraveler.id;
+  console.log(id)
 
   if (!inputTest) {
     domUpdates.buildErrorMessage();
@@ -197,7 +207,6 @@ function bookNewTrip() {
     domUpdates.buildBookingMessage(newTripInstance)
     domUpdates.displayTrips(currentTraveler.allTrips, cardGrid, "My Trips", allDestinations)
     bookingForm.reset();
-    apiCalls.getAllData()
-    retrieveAllData()
+    retrieveAllData(id)
   }
 }

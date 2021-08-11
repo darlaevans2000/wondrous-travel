@@ -35,16 +35,23 @@ const apiCalls = {
       .then(response =>
         response.json()
       )
-      .then(singleTravelerData => {
-        return singleTravelerData
+      .then(currentTraveler => {
+        return currentTraveler
       })
   },
 
-  getAllData(userID) {
-    return Promise.all([this.getAllTravelers(), this.getAllTrips(), this.getAllDestinations(), this.getSingleTraveler(userID)])
+  getAllData() {
+    return Promise.all([this.getAllTravelers(), this.getAllTrips(), this.getAllDestinations()])
       .then(data => data)
       .catch(err => console.log(err))
   },
+
+    getSingleTravelerData(userID) {
+    return Promise.all([this.getSingleTraveler(userID)])
+      .then(data => data)
+      .catch(err => console.log(err))
+  },
+
 
   postNewTrip(tripData) {
     return fetch('http://localhost:3001/api/v1/trips', {
