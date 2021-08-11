@@ -1,3 +1,4 @@
+// LOGIN PAGE
 .login-page {
   display: flex;
   height: 100%;
@@ -41,7 +42,7 @@
   }
 
   @media screen and (max-width: 800px) {
-   height: 80%;
+    height: 80%;
   }
 }
 
@@ -71,7 +72,6 @@
   font-size: 15px;
   margin: 1%;
   border-radius: 5px;
-  
 
   @media screen and (max-width: 1050px) {
     width: 50%;
@@ -87,11 +87,12 @@
   font-size: 15px;
   padding: 1%;
   border-radius: 5px;
-  
+
   &:hover {
-      background-color: $button-hover-color;
-   }
+    background-color: $button-hover-color;
+  }
 }
+
 .login-error {
   color: red;
   font-size: 2vh;
