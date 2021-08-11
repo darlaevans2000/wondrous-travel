@@ -14,7 +14,7 @@
   align-items: center;
   height: 3vw;
   margin: 4% 0 4% 1.5%;
-  font-size: 3.5vw;
+  font-size: 3vw;
   color: $black;
 }
 
@@ -74,8 +74,9 @@
 // three card width - med screens
 @media screen and (min-width: 826px) and (max-width: 1200px) {
   .grid-title {
-    font-size: 4vw;
+    font-size: 3vw;
     margin: 5% 0 5% 1.5%;
+    font-family: $primary-font;
   }
 
   .card {
@@ -106,7 +107,7 @@
 @media screen and (min-width: 575px) and (max-width: 825px) {
   .grid-title {
     margin: 5% 0 5% 2.7%;
-    font-size: 4.5vw;
+    font-size: 2vw;
   }
 
   .card-grid {
@@ -138,7 +139,7 @@ h3 {
 @media screen and (max-width: 575px) {
   .grid-title {
     margin: 8% 0 7% 10%;
-    font-size: 5.5vw;
+    font-size: 2.5vh;
   }
   
   .card-grid {

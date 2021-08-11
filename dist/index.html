@@ -19,9 +19,9 @@
       <label for="password">Password</label>
       <input type="text" name="password" id="password" class="login-input" placeholder="password">
       <button type="submit" class="login-btn" id="loginBtn">Login</button>
+      <h3 class="login-error hidden" id="loginError"></h3>
     </form>
   </div>
-  <h3 class="login-error hidden" id="loginError"></h3>
 </section>
   <section class="user-page hidden" id="userPage">
     <header>
@@ -55,7 +55,6 @@
           <p class="total-title">Annual Travel Costs: </p>
           <p class="total-amount" id="totalAmount"></p>
         </div>
-        <button id="logoutBtn">LOG OUT</button>
       </section>
     </header>
     <section class="booking-section">
@@ -90,7 +89,7 @@
           <button id="bookBtn" type="button" name="button">Book Trip</button>
         </div>
       </form>
-      <h2 id="bookingMessage"></h2>
+      <h2 id="bookingMessage" class="booking-message"></h2>
     </section>
     <main>
       <div class="main-container">
