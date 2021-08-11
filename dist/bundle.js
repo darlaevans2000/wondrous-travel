@@ -8,6 +8,12 @@
 
 /***/ }),
 /* 2 */
+/***/ (function(module) {
+
+!function(e,i){ true?module.exports=i():0}(this,(function(){"use strict";return function(e,i,t){i.prototype.isBetween=function(e,i,s,f){var n=t(e),o=t(i),r="("===(f=f||"()")[0],u=")"===f[1];return(r?this.isAfter(n,s):!this.isBefore(n,s))&&(u?this.isBefore(o,s):!this.isAfter(o,s))||(r?this.isBefore(n,s):!this.isAfter(n,s))&&(u?this.isAfter(o,s):!this.isBefore(o,s))}}}));
+
+/***/ }),
+/* 3 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -15,9 +21,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("images/logo.png");
+
+/***/ }),
+/* 4 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("images/background.png");
+
+/***/ }),
+/* 5 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_base_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_base_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
 
             
 
@@ -33,7 +61,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_base_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
-/* 3 */
+/* 6 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -308,7 +336,7 @@ module.exports = function (list, options) {
 };
 
 /***/ }),
-/* 4 */
+/* 7 */
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -316,13 +344,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _images_background_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
+/* harmony import */ var _images_background_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 // Imports
 
 
@@ -331,13 +359,13 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(_images_background_png__WEBPACK_IMPORTED_MODULE_3__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */\n}\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers.\n */\nbody {\n  margin: 0;\n}\n\n/**\n * Render the `main` element consistently in IE.\n */\nmain {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Remove the gray background on active links in IE 10.\n */\na {\n  background-color: transparent;\n}\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */\n}\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove the border on images inside links in IE 10.\n */\nimg {\n  border-style: none;\n}\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none;\n}\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\n[type=button],\n[type=reset],\n[type=submit] {\n  -webkit-appearance: button;\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=button]::-moz-focus-inner,\n[type=reset]::-moz-focus-inner,\n[type=submit]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=button]:-moz-focusring,\n[type=reset]:-moz-focusring,\n[type=submit]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */\n}\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  vertical-align: baseline;\n}\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\ntextarea {\n  overflow: auto;\n}\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n[type=checkbox],\n[type=radio] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=number]::-webkit-inner-spin-button,\n[type=number]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=search] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */\n}\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n[type=search]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n}\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\ndetails {\n  display: block;\n}\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item;\n}\n\n/* Misc\n   ========================================================================== */\n/**\n * Add the correct display in IE 10+.\n */\ntemplate {\n  display: none;\n}\n\n/**\n * Add the correct display in IE 10.\n */\n[hidden] {\n  display: none;\n}\n\n.login-page {\n  display: flex;\n  height: 100%;\n  width: 100%;\n  justify-content: center;\n  align-items: center;\n  font-family: \"Kanit\", sans-serif;\n}\n@media screen and (max-width: 800px) {\n  .login-page {\n    margin-top: 18vw;\n  }\n}\n@media screen and (max-width: 500px) {\n  .login-page {\n    margin-top: 23vw;\n  }\n}\n\n.login-container {\n  padding-top: 5%;\n  display: grid;\n  grid-template-rows: 45% 45%;\n  height: 40%;\n  width: 35%;\n  color: black;\n  background-color: rgba(255, 255, 255, 0.5);\n  font-size: 20px;\n  border-radius: 5px;\n}\n@media screen and (max-width: 400px) {\n  .login-container {\n    width: 80%;\n  }\n}\n\n.logo-login {\n  align-self: center;\n  justify-self: center;\n  height: 200%;\n}\n@media screen and (max-width: 1050px) {\n  .logo-login {\n    height: 100%;\n  }\n}\n@media screen and (max-width: 800px) {\n  .logo-login {\n    height: 80%;\n  }\n}\n\n.login-form {\n  display: flex;\n  flex-direction: column;\n  justify-self: center;\n  justify-content: space-around;\n  align-items: center;\n  width: 60%;\n  padding: 1vw;\n  color: black;\n}\n@media screen and (max-width: 1050px) {\n  .login-form {\n    width: 80%;\n  }\n}\n@media screen and (max-width: 800px) {\n  .login-form {\n    width: 100%;\n  }\n}\n\n.login-input {\n  width: 50%;\n  padding: 0.25vw;\n  border: 1px solid black;\n  font-size: 15px;\n  margin: 1%;\n  border-radius: 5px;\n}\n@media screen and (max-width: 1050px) {\n  .login-input {\n    width: 50%;\n  }\n}\n\n.login-btn {\n  width: 5em;\n  align-self: center;\n  cursor: pointer;\n  margin-top: 2%;\n  border: 1px solid black;\n  font-size: 15px;\n  padding: 1%;\n  border-radius: 5px;\n}\n.login-btn:hover {\n  background-color: #5E6572;\n}\n\n.main-wrapper {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  width: 94%;\n  height: 100%;\n}\n\n/** four card - lg screen **/\n.grid-title {\n  display: flex;\n  align-items: center;\n  height: 3vw;\n  margin: 4% 0 4% 1.5%;\n  font-size: 3.5vw;\n  color: black;\n}\n\n.card-grid {\n  display: grid;\n  grid-template-columns: 23% 23% 23% 23%;\n  grid-row-gap: 1.5%;\n  justify-content: space-evenly;\n  align-content: flex-start;\n  width: 100%;\n  height: 100%;\n  margin-bottom: 5%;\n}\n\n/** three card - smaller screen **/\n@media screen and (min-width: 626px) and (max-width: 1050px) {\n  .grid-title {\n    font-size: 4vw;\n    margin: 5% 0 5% 1.5%;\n  }\n\n  .card-grid {\n    grid-template-columns: 31% 31% 31%;\n    grid-row-gap: 1.75%;\n  }\n}\n/** two card - smallest screen**/\n@media screen and (min-width: 375px) and (max-width: 625px) {\n  .grid-title {\n    margin: 5% 0 5% 2.7%;\n    font-size: 4.5vw;\n  }\n\n  .card-grid {\n    grid-template-columns: 45% 45%;\n    grid-column-gap: 1.5%;\n    grid-row-gap: 1.75%;\n  }\n}\n/** one card width **/\n@media screen and (max-width: 375px) {\n  .grid-title {\n    margin: 8% 0 7% 10%;\n    font-size: 5.5vw;\n  }\n\n  .card-grid {\n    grid-template-columns: 80%;\n    grid-row-gap: 1%;\n  }\n}\n.booking-section {\n  display: grid;\n  grid-template-rows: 30% 70%;\n  margin: 3% 7% 1% 7%;\n  max-height: 12vw;\n  background-image: linear-gradient(#0B3954, #4d7ea8, #7d98a1);\n  color: black;\n  border: 2px solid #808080;\n  border-radius: 20px;\n}\n@media screen and (max-width: 800px) {\n  .booking-section {\n    max-height: 50vw;\n    height: 17vw;\n  }\n}\n\n.book-top {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-top: 2%;\n  font-size: 2.5vw;\n  font-weight: bold;\n  color: #ffffff;\n}\n\n.book-bottom {\n  display: grid;\n  grid-template-columns: 18% 18% 18% 18% 18%;\n  justify-content: space-around;\n  margin: 1% 1% 1% 2%;\n}\n.book-bottom input, .book-bottom select {\n  max-height: 1.75vw;\n  max-width: 15vw;\n  margin-top: 5%;\n  font-size: 1vw;\n}\n.book-bottom label {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  margin-bottom: 8%;\n  font-size: 1.25vw;\n  color: black;\n}\n\n.selection {\n  display: flex;\n  flex-direction: row;\n  margin: 0;\n  justify-content: center;\n  height: 100%;\n}\n\n.booking-btns {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  margin-left: 3%;\n}\n.booking-btns button {\n  border-radius: 3%;\n  margin: 2%;\n  padding: 2% 3% 2% 3%;\n  font-size: 1vw;\n  cursor: pointer;\n  border-radius: 15px;\n}\n.booking-btns button:hover {\n  background-color: #5E6572;\n}\n\nheader {\n  display: grid;\n  grid-template-columns: 70% 30%;\n  min-height: 18vw;\n  background-size: cover;\n  border-bottom: 0.6em solid black;\n  height: 15vh;\n}\n@media screen and (max-width: 800px) {\n  header {\n    height: 30vw;\n  }\n}\n\n.nav-left {\n  display: grid;\n  grid-template-rows: 25% 40%;\n  align-items: space-between;\n  height: 10vh;\n}\n.nav-left .title {\n  padding-top: 10%;\n  justify-self: center;\n  align-self: center;\n  font-size: 4vw;\n  padding-bottom: 0%;\n  color: black;\n  font-family: \"Pacifico\", cursive;\n}\n\n.nav-btns {\n  display: grid;\n  grid-template-columns: 23% 23% 23% 23%;\n  width: 100%;\n  justify-content: space-evenly;\n  align-items: flex-end;\n  margin-top: 20%;\n}\n.nav-btns button {\n  justify-self: center;\n  align-self: center;\n  width: 10vw;\n  height: 6vh;\n  color: #ffffff;\n  background-color: #466b77;\n  border: 3px solid black;\n  font-size: 1.2vw;\n  border-radius: 20px;\n  cursor: pointer;\n}\n.nav-btns button:hover {\n  background-color: #5E6572;\n}\n.nav-btns i {\n  margin: 0.5em;\n}\n\n.nav-right {\n  display: grid;\n  grid-template-rows: 40% 40% 20%;\n}\n.nav-right button {\n  justify-self: flex-end;\n  align-self: flex-end;\n  width: 5vw;\n  height: 2vw;\n  font-size: 0.8vw;\n  margin-bottom: 1%;\n  color: #ffffff;\n  background-color: #466b77;\n  border: 2px solid black;\n  border-radius: 20px;\n  cursor: pointer;\n}\n.nav-right button:hover {\n  background-color: #5E6572;\n}\n\n.welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  align-self: center;\n  width: 10vw;\n  max-height: 4vw;\n  font-size: 2vw;\n  font-weight: bold;\n  color: black;\n}\n\n.total-spent {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  justify-self: center;\n  align-self: center;\n  align-items: center;\n  width: 12vw;\n  height: 3.5vw;\n  background-color: #416788;\n  color: black;\n}\n\n.total-title {\n  font-size: 1.2vw;\n  font-weight: bold;\n  color: #ffffff;\n}\n\n.total-amount {\n  font-size: 1vw;\n  color: #ffffff;\n}\n\n* {\n  margin: 0;\n  padding: 0;\n  font-family: \"Kanit\", sans-serif;\n}\n\nhtml {\n  height: 100%;\n}\n\nbody {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  background-size: auto;\n  height: 100%;\n}\n\nmain {\n  display: flex;\n  justify-content: center;\n  height: 100%;\n}\n\nh1 {\n  font-family: \"Pacifico\", cursive;\n  color: black;\n}\n\nh2 {\n  font-family: \"Pacifico\", cursive;\n  color: black;\n}\n\n.user-page {\n  background-color: rgba(255, 255, 255, 0.61);\n}\n\n.hidden {\n  display: none;\n}", "",{"version":3,"sources":["webpack://./src/css/_normalize.scss","webpack://./src/css/base.scss","webpack://./src/css/_login.scss","webpack://./src/css/_variables.scss","webpack://./src/css/_cards.scss","webpack://./src/css/_book.scss","webpack://./src/css/_nav.scss"],"names":[],"mappings":"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","sourcesContent":["/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n\n/* Document\n   ========================================================================== */\n\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\n\nhtml {\n  line-height: 1.15; /* 1 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/* Sections\n   ========================================================================== */\n\n/**\n * Remove the margin in all browsers.\n */\n\nbody {\n  margin: 0;\n}\n\n/**\n * Render the `main` element consistently in IE.\n */\n\nmain {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\n\nhr {\n  box-sizing: content-box; /* 1 */\n  height: 0; /* 1 */\n  overflow: visible; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\npre {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * Remove the gray background on active links in IE 10.\n */\n\na {\n  background-color: transparent;\n}\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\n\nabbr[title] {\n  border-bottom: none; /* 1 */\n  text-decoration: underline; /* 2 */\n  text-decoration: underline dotted; /* 2 */\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * Add the correct font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* Embedded content\n   ========================================================================== */\n\n/**\n * Remove the border on images inside links in IE 10.\n */\n\nimg {\n  border-style: none;\n}\n\n/* Forms\n   ========================================================================== */\n\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: 1.15; /* 1 */\n  margin: 0; /* 2 */\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\n\nbutton,\ninput { /* 1 */\n  overflow: visible;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\n\nbutton,\nselect { /* 1 */\n  text-transform: none;\n}\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\n\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Correct the padding in Firefox.\n */\n\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\n\nlegend {\n  box-sizing: border-box; /* 1 */\n  color: inherit; /* 2 */\n  display: table; /* 1 */\n  max-width: 100%; /* 1 */\n  padding: 0; /* 3 */\n  white-space: normal; /* 1 */\n}\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\n\nprogress {\n  vertical-align: baseline;\n}\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n\n[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/* Interactive\n   ========================================================================== */\n\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\n\ndetails {\n  display: block;\n}\n\n/*\n * Add the correct display in all browsers.\n */\n\nsummary {\n  display: list-item;\n}\n\n/* Misc\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 10+.\n */\n\ntemplate {\n  display: none;\n}\n\n/**\n * Add the correct display in IE 10.\n */\n\n[hidden] {\n  display: none;\n}\n","@import '_normalize';\n@import '_variables';\n@import '_login';\n@import '_cards';\n@import '_book';\n@import '_nav';\n\n// main stylings\n* {\n  margin: 0;\n  padding: 0;\n  font-family: $primary-font;\n}\n\nhtml {\n  height: 100%;\n}\n\nbody {\n  background-image: url('../images/background.png');\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  background-size: auto;\n  height: 100%;\n}\n\nmain {\n  display: flex;\n  justify-content: center;\n  height: 100%;\n}\n\nh1 {\n  font-family: $header-font;\n  color: $black;\n}\n\nh2 {\n  font-family: $header-font;\n  color: $black;\n}\n\n.user-page {\n    background-color: rgba(255, 255, 255, 0.61);\n}\n\n.hidden {\n  display: none;\n}",".login-page {\n  display: flex;\n  height: 100%;\n  width: 100%;\n  justify-content: center;\n  align-items: center;\n  font-family: $primary-font;\n\n  @media screen and (max-width: 800px) {\n    margin-top: 18vw;\n  }\n\n  @media screen and (max-width: 500px) {\n    margin-top: 23vw;\n  }\n}\n\n.login-container {\n  padding-top: 5%;\n  display: grid;\n  grid-template-rows: 45% 45%;\n  height: 40%;\n  width: 35%;\n  color: $black;\n  background-color: $login-container-color;\n  font-size: 20px;\n  border-radius: 5px;\n\n  @media screen and (max-width: 400px) {\n    width: 80%;\n  }\n}\n\n.logo-login {\n  align-self: center;\n  justify-self: center;\n  height: 200%;\n\n  @media screen and (max-width: 1050px) {\n    height: 100%;\n  }\n\n  @media screen and (max-width: 800px) {\n   height: 80%;\n  }\n}\n\n.login-form {\n  display: flex;\n  flex-direction: column;\n  justify-self: center;\n  justify-content: space-around;\n  align-items: center;\n  width: 60%;\n  padding: 1vw;\n  color: $black;\n\n  @media screen and (max-width: 1050px) {\n    width: 80%;\n  }\n\n  @media screen and (max-width: 800px) {\n    width: 100%;\n  }\n}\n\n.login-input {\n  width: 50%;\n  padding: 0.25vw;\n  border: 1px solid $black;\n  font-size: 15px;\n  margin: 1%;\n  border-radius: 5px;\n  \n\n  @media screen and (max-width: 1050px) {\n    width: 50%;\n  }\n}\n\n.login-btn {\n  width: 5em;\n  align-self: center;\n  cursor: pointer;\n  margin-top: 2%;\n  border: 1px solid $black;\n  font-size: 15px;\n  padding: 1%;\n  border-radius: 5px;\n  \n  &:hover {\n      background-color: $button-hover-color;\n   }\n}","$accent-color: #416788;\n$black: black;\n$grey: #808080;\n$white: #ffffff;\n$button-color: #466b77;\n$button-hover-color: #5E6572;\n\n$login-container-color: rgba(255,255,255,0.5);\n$user-pg-color: rgba(255, 255, 255, 0.61);\n\n\n// FONTS\n\n$primary-font: 'Kanit', sans-serif;\n$header-font: 'Pacifico', cursive;\n","// CARD GRID\n\n.main-wrapper {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  width: 94%;\n  height: 100%;\n}\n\n/** four card - lg screen **/\n\n.grid-title {\n  display: flex;\n  align-items: center;\n  height: 3vw;\n  margin: 4% 0 4% 1.5%;\n  font-size: 3.5vw;\n  color: $black;\n}\n\n.card-grid {\n  display: grid;\n  grid-template-columns: 23% 23% 23% 23%;\n  grid-row-gap: 1.5%;\n  justify-content: space-evenly;\n  align-content: flex-start;\n  width: 100%;\n  height: 100%;\n  margin-bottom: 5%;\n}\n\n/** three card - smaller screen **/\n\n@media screen and (min-width: 626px) and (max-width: 1050px) {\n  .grid-title {\n    font-size: 4vw;\n    margin: 5% 0 5% 1.5%;\n  }\n\n  .card-grid {\n    grid-template-columns: 31% 31% 31%;\n    grid-row-gap: 1.75%;\n  }\n}\n\n/** two card - smallest screen**/\n\n@media screen and (min-width: 375px) and (max-width: 625px) {\n  .grid-title {\n    margin: 5% 0 5% 2.7%;\n    font-size: 4.5vw;\n  }\n\n  .card-grid {\n    grid-template-columns: 45% 45%;\n    grid-column-gap: 1.5%;\n    grid-row-gap: 1.75%;\n  }\n}\n\n/** one card width **/\n\n@media screen and (max-width: 375px) {\n  .grid-title {\n    margin: 8% 0 7% 10%;\n    font-size: 5.5vw;\n  }\n  \n  .card-grid {\n    grid-template-columns: 80%;\n    grid-row-gap: 1%;\n  }\n}","// BOOKING CONTAINER\n\n.booking-section {\n  display: grid;\n  grid-template-rows: 30% 70%;\n  margin: 3% 7% 1% 7%;\n  max-height: 12vw;\n  background-image: linear-gradient(#0B3954, #4d7ea8, #7d98a1);\n  color: $black;\n  border: 2px solid $grey;\n  border-radius: 20px;\n\n  @media screen and (max-width: 800px) {\n    max-height: 50vw;\n    height: 17vw;\n  }\n}\n\n.book-top {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-top: 2%;\n  font-size: 2.5vw;\n  font-weight: bold;\n  color: $white;\n}\n\n.book-bottom {\n  display: grid;\n  grid-template-columns: 18% 18% 18% 18% 18%;\n  justify-content: space-around;\n  margin: 1% 1% 1% 2%;\n\n  input, select {\n    max-height: 1.75vw;\n    max-width: 15vw;\n    margin-top: 5%;\n    font-size: 1vw;\n  }\n\n  label {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-end;\n    margin-bottom: 8%;\n    font-size: 1.25vw;\n    color: $black;\n  }\n}\n\n.selection {\n  display: flex;\n  flex-direction: row;\n  margin: 0;\n  justify-content: center;\n  height: 100%;\n}\n\n.booking-btns {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  margin-left: 3%;\n\n  button {\n    border-radius: 3%;\n    margin: 2%;\n    padding: 2% 3% 2% 3%;\n    font-size: 1vw;\n    cursor: pointer;\n    border-radius: 15px;\n\n    &:hover {\n      background-color: $button-hover-color;\n    }\n  }\n}\n","// NAV BAR\n\nheader {\n  display: grid;\n  grid-template-columns: 70% 30%;\n  min-height: 18vw;\n  background-size: cover;\n  border-bottom: 0.6em solid $black;\n  height: 15vh;\n\n  @media screen and (max-width: 800px) {\n    height: 30vw;\n  }\n}\n\n// LEFT\n.nav-left {\n  display: grid;\n  grid-template-rows: 25% 40%;\n  align-items: space-between;\n  height: 10vh;\n\n  .title {\n    padding-top: 10%;\n    justify-self: center;\n    align-self: center;\n    font-size: 4.0vw;\n    padding-bottom: 0%;\n    color: $black;\n    font-family: $header-font;\n  }\n}\n\n.nav-btns {\n  display: grid;\n  grid-template-columns: 23% 23% 23% 23%;\n  width: 100%;\n  justify-content: space-evenly;\n  align-items: flex-end;\n  margin-top: 20%;\n\n  button {\n    justify-self: center;\n    align-self: center;\n    width: 10vw;\n    height: 6vh;\n    color: $white;\n    background-color: $button-color;\n    border: 3px solid $black;\n    font-size: 1.2vw;\n    border-radius: 20px;\n    cursor: pointer;\n\n     &:hover {\n      background-color: $button-hover-color;\n    }\n  }\n\n  i {\n    margin: 0.5em;\n  }\n}\n\n// RIGHT\n.nav-right {\n  display: grid;\n  grid-template-rows: 40% 40% 20%;\n\n//Logout button\n  button {\n    justify-self: flex-end;\n    align-self: flex-end;\n    width: 5vw;\n    height: 2vw;\n    font-size: 0.8vw;\n    margin-bottom: 1%;\n    color: $white;\n    background-color: $button-color;\n    border: 2px solid $black;\n    border-radius: 20px;\n    cursor: pointer;\n    \n    &:hover {\n      background-color: $button-hover-color;\n    }\n  }\n}\n\n.welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  align-self: center;\n  width: 10vw;\n  max-height: 4vw;\n  font-size: 2vw;\n  font-weight: bold;\n  color: $black;\n}\n\n.total-spent {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  justify-self: center;\n  align-self: center;\n  align-items: center;\n  width: 12vw;\n  height: 3.5vw;\n  background-color: $accent-color;\n  color: $black;\n}\n\n.total-title {\n  font-size: 1.2vw;\n  font-weight: bold;\n  color: $white;\n}\n\n.total-amount {\n  font-size: 1vw;\n  color: $white;\n}\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */\n}\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers.\n */\nbody {\n  margin: 0;\n}\n\n/**\n * Render the `main` element consistently in IE.\n */\nmain {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Remove the gray background on active links in IE 10.\n */\na {\n  background-color: transparent;\n}\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */\n}\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove the border on images inside links in IE 10.\n */\nimg {\n  border-style: none;\n}\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none;\n}\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\n[type=button],\n[type=reset],\n[type=submit] {\n  -webkit-appearance: button;\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=button]::-moz-focus-inner,\n[type=reset]::-moz-focus-inner,\n[type=submit]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=button]:-moz-focusring,\n[type=reset]:-moz-focusring,\n[type=submit]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */\n}\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  vertical-align: baseline;\n}\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\ntextarea {\n  overflow: auto;\n}\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n[type=checkbox],\n[type=radio] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=number]::-webkit-inner-spin-button,\n[type=number]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=search] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */\n}\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n[type=search]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n}\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\ndetails {\n  display: block;\n}\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item;\n}\n\n/* Misc\n   ========================================================================== */\n/**\n * Add the correct display in IE 10+.\n */\ntemplate {\n  display: none;\n}\n\n/**\n * Add the correct display in IE 10.\n */\n[hidden] {\n  display: none;\n}\n\n.login-page {\n  display: flex;\n  height: 100%;\n  width: 100%;\n  justify-content: center;\n  align-items: center;\n  font-family: \"Kanit\", sans-serif;\n}\n@media screen and (max-width: 800px) {\n  .login-page {\n    margin-top: 18vw;\n  }\n}\n@media screen and (max-width: 500px) {\n  .login-page {\n    margin-top: 23vw;\n  }\n}\n\n.login-container {\n  padding-top: 5%;\n  display: grid;\n  grid-template-rows: 45% 45%;\n  height: 40%;\n  width: 35%;\n  color: black;\n  background-color: rgba(255, 255, 255, 0.5);\n  font-size: 20px;\n  border-radius: 5px;\n}\n@media screen and (max-width: 400px) {\n  .login-container {\n    width: 80%;\n  }\n}\n\n.logo-login {\n  align-self: center;\n  justify-self: center;\n  height: 200%;\n}\n@media screen and (max-width: 1050px) {\n  .logo-login {\n    height: 100%;\n  }\n}\n@media screen and (max-width: 800px) {\n  .logo-login {\n    height: 80%;\n  }\n}\n\n.login-form {\n  display: flex;\n  flex-direction: column;\n  justify-self: center;\n  justify-content: space-around;\n  align-items: center;\n  width: 60%;\n  padding: 1vw;\n  color: black;\n}\n@media screen and (max-width: 1050px) {\n  .login-form {\n    width: 80%;\n  }\n}\n@media screen and (max-width: 800px) {\n  .login-form {\n    width: 100%;\n  }\n}\n\n.login-input {\n  width: 50%;\n  padding: 0.25vw;\n  border: 1px solid black;\n  font-size: 15px;\n  margin: 1%;\n  border-radius: 5px;\n}\n@media screen and (max-width: 1050px) {\n  .login-input {\n    width: 50%;\n  }\n}\n\n.login-btn {\n  width: 5em;\n  align-self: center;\n  cursor: pointer;\n  margin-top: 2%;\n  border: 1px solid black;\n  font-size: 15px;\n  padding: 1%;\n  border-radius: 5px;\n}\n.login-btn:hover {\n  background-color: #5E6572;\n}\n\n.login-error {\n  color: red;\n  font-size: 2vh;\n}\n\n.main-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  width: 94%;\n  height: 100%;\n}\n\n.grid-title {\n  display: flex;\n  align-items: center;\n  height: 3vw;\n  margin: 4% 0 4% 1.5%;\n  font-size: 3vw;\n  color: black;\n}\n\n.card-grid {\n  display: grid;\n  grid-template-columns: 23% 23% 23% 23%;\n  grid-row-gap: 1.5%;\n  justify-content: space-evenly;\n  align-content: flex-start;\n  width: 100%;\n  height: 100%;\n  margin-bottom: 5%;\n}\n\n.card {\n  display: grid;\n  grid-template-rows: 40% 60%;\n  width: auto;\n  height: 80vh;\n  border-radius: 3px;\n}\n\n.card-top {\n  border-radius: 3px 3px 0 0;\n  background-size: cover;\n}\n\n.card-bottom {\n  display: grid;\n  grid-template-rows: 20% 23% 23% 23%;\n  align-items: flex-end;\n  padding: 1.6vw;\n  border-radius: 0 0 3px 3px;\n  background: rgba(255, 255, 255, 0.829);\n}\n\n.trip-info {\n  display: grid;\n  grid-template-columns: 60% 40%;\n  width: 100%;\n  margin: 5% 1% 3%;\n}\n.trip-info h3 {\n  font-size: 1.25vw;\n  margin: 0;\n}\n.trip-info h2 {\n  font-family: \"Kanit\", sans-serif;\n  font-size: 1.2vw;\n  margin: 0;\n  color: #416788;\n}\n\n@media screen and (min-width: 826px) and (max-width: 1200px) {\n  .grid-title {\n    font-size: 3vw;\n    margin: 5% 0 5% 1.5%;\n    font-family: \"Kanit\", sans-serif;\n  }\n\n  .card {\n    height: 44vw;\n  }\n\n  .trip-info h3 {\n    font-size: 2vw;\n    margin: 0;\n  }\n  .trip-info h2 {\n    font-family: \"Kanit\", sans-serif;\n    font-size: 1.7vw;\n    margin: 0;\n    color: #416788;\n  }\n\n  .card-grid {\n    grid-template-columns: 31% 31% 31%;\n    grid-row-gap: 1.75%;\n  }\n}\n@media screen and (min-width: 575px) and (max-width: 825px) {\n  .grid-title {\n    margin: 5% 0 5% 2.7%;\n    font-size: 2vw;\n  }\n\n  .card-grid {\n    grid-template-columns: 45% 45%;\n    grid-column-gap: 1.5%;\n    grid-row-gap: 1.75%;\n  }\n\n  .card {\n    height: 60vw;\n  }\n\n  .trip-info h3 {\n    font-size: 2.8vw;\n    margin: 0;\n  }\n  .trip-info h2 {\n    font-family: \"Kanit\", sans-serif;\n    font-size: 2.5vw;\n    margin: 0;\n    color: #416788;\n  }\n}\n@media screen and (max-width: 575px) {\n  .grid-title {\n    margin: 8% 0 7% 10%;\n    font-size: 2.5vh;\n  }\n\n  .card-grid {\n    grid-template-columns: 80%;\n    grid-row-gap: 1%;\n  }\n\n  .card {\n    height: 110vw;\n  }\n\n  .card-bottom {\n    justify-content: center;\n    align-items: center;\n    padding: 3.5vw 6vw 0 0;\n  }\n\n  .trip-info h3 {\n    font-size: 4vw;\n    margin: 0;\n  }\n  .trip-info h2 {\n    font-family: \"Kanit\", sans-serif;\n    font-size: 3.5vw;\n    margin: 0;\n    color: #416788;\n  }\n}\n.no-results {\n  font-size: 2vw;\n}\n\n.booking-section {\n  display: grid;\n  grid-template-rows: 30% 70%;\n  margin: 3% 7% 1%;\n  max-height: 20vh;\n  background-image: linear-gradient(#0B3954, #4d7ea8, #7d98a1);\n  color: black;\n  border: 2px solid #808080;\n  border-radius: 20px;\n}\n\n.book-top {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-top: 2%;\n  font-size: 2.5vw;\n  font-weight: bold;\n  color: #ffffff;\n}\n@media screen and (max-width: 1200px) {\n  .book-top {\n    font-size: 30px;\n  }\n}\n@media screen and (max-width: 700px) {\n  .book-top {\n    font-size: 20px;\n  }\n}\n\n.book-bottom {\n  display: grid;\n  grid-template-columns: 18% 18% 18% 18% 18%;\n  justify-content: space-around;\n  margin: 1% 1% 1% 2%;\n}\n.book-bottom input,\n.book-bottom select {\n  max-width: 15vw;\n  margin-top: 5%;\n  font-size: 1vw;\n}\n@media screen and (max-width: 1200px) {\n  .book-bottom input,\n.book-bottom select {\n    height: 2.5vh;\n    font-size: 1.2vw;\n  }\n}\n@media screen and (max-width: 900px) {\n  .book-bottom input,\n.book-bottom select {\n    height: 2.5vh;\n    font-size: 1.5vw;\n  }\n}\n@media screen and (max-width: 700px) {\n  .book-bottom input,\n.book-bottom select {\n    height: 3vh;\n    font-size: 2vw;\n  }\n}\n.book-bottom label {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  margin-bottom: 8%;\n  font-size: 1.25vw;\n  color: black;\n}\n@media screen and (max-width: 1200px) {\n  .book-bottom label {\n    font-size: 2vw;\n  }\n}\n@media screen and (max-width: 650px) {\n  .book-bottom label {\n    font-size: 3.5vw;\n  }\n}\n\n.selection {\n  display: flex;\n  flex-direction: row;\n  margin: 0;\n  justify-content: center;\n  height: 100%;\n}\n\n.booking-btns {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  margin-left: 3%;\n}\n.booking-btns button {\n  margin: 2%;\n  padding: 2% 3%;\n  font-size: 1vw;\n  cursor: pointer;\n  border-radius: 15px;\n}\n.booking-btns button:hover {\n  background-color: #5E6572;\n}\n@media screen and (max-width: 900px) {\n  .booking-btns button {\n    font-size: 1.5vw;\n  }\n}\n@media screen and (max-width: 400px) {\n  .booking-btns button {\n    width: 13vw;\n    height: 5vh;\n    font-size: 2vw;\n  }\n}\n\n.booking-message {\n  color: #9E2400;\n  font-family: \"Kanit\", sans-serif;\n  font-size: 2.5vh;\n}\n\nheader {\n  display: grid;\n  grid-template-columns: 70% 30%;\n  background-size: cover;\n  border-bottom: 0.6em solid black;\n  height: 38vh;\n}\n@media screen and (max-width: 1150px) {\n  header {\n    height: 30vh;\n  }\n}\n@media screen and (max-width: 750px) {\n  header {\n    height: 25vh;\n  }\n}\n\n.nav-left {\n  display: grid;\n  grid-template-rows: 40% 25%;\n  align-items: space-between;\n  height: 10vh;\n}\n.nav-left .title {\n  padding-top: 10%;\n  justify-self: center;\n  align-self: center;\n  font-size: 4vw;\n  padding-bottom: 0;\n  color: black;\n  font-family: \"Pacifico\", cursive;\n}\n@media screen and (max-width: 750px) {\n  .nav-left .title {\n    font-size: 4.5vw;\n  }\n}\n@media screen and (max-width: 500px) {\n  .nav-left .title {\n    font-size: 8vw;\n  }\n}\n.nav-left .current-date {\n  padding-top: 25%;\n  justify-self: center;\n  align-self: center;\n  font-size: 2.5vw;\n}\n@media screen and (max-width: 750px) {\n  .nav-left .current-date {\n    font-size: 3.5vw;\n  }\n}\n@media screen and (max-width: 500px) {\n  .nav-left .current-date {\n    font-size: 5vw;\n  }\n}\n\n.nav-btns {\n  display: grid;\n  grid-template-columns: 20% 20% 20% 20% 20%;\n  width: 100%;\n  justify-content: space-evenly;\n  align-items: flex-end;\n  margin-top: 20%;\n}\n.nav-btns button {\n  justify-self: center;\n  align-self: center;\n  width: 10vw;\n  height: 6vh;\n  color: #ffffff;\n  background-color: #466b77;\n  border: 3px solid black;\n  font-size: 1.2vw;\n  border-radius: 20px;\n  cursor: pointer;\n}\n.nav-btns button:hover {\n  background-color: #5E6572;\n}\n@media screen and (max-width: 1150px) {\n  .nav-btns button {\n    width: 12vw;\n    font-size: 1.5vw;\n  }\n}\n@media screen and (max-width: 850px) {\n  .nav-btns button {\n    width: 13vw;\n    font-size: 1.8vw;\n  }\n}\n@media screen and (max-width: 400px) {\n  .nav-btns button {\n    height: 5vh;\n    width: 15vw;\n    font-size: 2.5vw;\n  }\n}\n\n.nav-right {\n  display: grid;\n  grid-template-rows: 60% 40%;\n}\n.nav-right .welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  justify-self: center;\n  align-self: center;\n  align-items: center;\n  width: 10vw;\n  max-height: 4vw;\n  font-size: 2.3vw;\n  font-weight: bold;\n  color: black;\n}\n@media screen and (max-width: 750px) {\n  .nav-right .welcome {\n    font-size: 3vw;\n  }\n}\n@media screen and (max-width: 500px) {\n  .nav-right .welcome {\n    font-size: 3.5vw;\n  }\n}\n.nav-right .total-spent {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  justify-self: center;\n  align-self: center;\n  align-items: center;\n  width: 14vw;\n  height: 6vh;\n  background-color: #416788;\n  color: black;\n}\n@media screen and (max-width: 1150px) {\n  .nav-right .total-spent {\n    height: 6vh;\n    width: 18vw;\n  }\n}\n@media screen and (max-width: 750px) {\n  .nav-right .total-spent {\n    height: 6vh;\n    width: 16vw;\n  }\n}\n.nav-right .total-title {\n  font-size: 1.4vw;\n  font-weight: bold;\n  color: #ffffff;\n}\n@media screen and (max-width: 1150px) {\n  .nav-right .total-title {\n    font-size: 1.8vw;\n  }\n}\n@media screen and (max-width: 500px) {\n  .nav-right .total-title {\n    font-size: 2.8vw;\n  }\n}\n.nav-right .total-amount {\n  font-size: 1.2vw;\n  color: #ffffff;\n}\n@media screen and (max-width: 1150px) {\n  .nav-right .total-amount {\n    font-size: 1.4vw;\n  }\n}\n@media screen and (max-width: 750px) {\n  .nav-right .total-amount {\n    font-size: 1.8vw;\n  }\n}\n@media screen and (max-width: 500px) {\n  .nav-right .total-amount {\n    font-size: 2.6vw;\n  }\n}\n\n* {\n  margin: 0;\n  padding: 0;\n  font-family: \"Kanit\", sans-serif;\n}\n\nhtml {\n  height: 100%;\n}\n\nbody {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  background-size: auto;\n  height: 100%;\n}\n\nmain {\n  display: flex;\n  justify-content: center;\n  height: 100%;\n}\n\nh1 {\n  font-family: \"Pacifico\", cursive;\n  color: black;\n}\n\nh2 {\n  font-family: \"Pacifico\", cursive;\n  color: black;\n}\n\n.user-page {\n  background-color: rgba(255, 255, 255, 0.61);\n}\n\n.hidden {\n  display: none;\n}", "",{"version":3,"sources":["webpack://./src/css/_normalize.scss","webpack://./src/css/base.scss","webpack://./src/css/_login.scss","webpack://./src/css/_variables.scss","webpack://./src/css/_cards.scss","webpack://./src/css/_book.scss","webpack://./src/css/_nav.scss"],"names":[],"mappings":"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","sourcesContent":["/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n\n/* Document\n   ========================================================================== */\n\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\n\nhtml {\n  line-height: 1.15; /* 1 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/* Sections\n   ========================================================================== */\n\n/**\n * Remove the margin in all browsers.\n */\n\nbody {\n  margin: 0;\n}\n\n/**\n * Render the `main` element consistently in IE.\n */\n\nmain {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\n\nhr {\n  box-sizing: content-box; /* 1 */\n  height: 0; /* 1 */\n  overflow: visible; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\npre {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * Remove the gray background on active links in IE 10.\n */\n\na {\n  background-color: transparent;\n}\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\n\nabbr[title] {\n  border-bottom: none; /* 1 */\n  text-decoration: underline; /* 2 */\n  text-decoration: underline dotted; /* 2 */\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * Add the correct font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* Embedded content\n   ========================================================================== */\n\n/**\n * Remove the border on images inside links in IE 10.\n */\n\nimg {\n  border-style: none;\n}\n\n/* Forms\n   ========================================================================== */\n\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: 1.15; /* 1 */\n  margin: 0; /* 2 */\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\n\nbutton,\ninput { /* 1 */\n  overflow: visible;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\n\nbutton,\nselect { /* 1 */\n  text-transform: none;\n}\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\n\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Correct the padding in Firefox.\n */\n\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\n\nlegend {\n  box-sizing: border-box; /* 1 */\n  color: inherit; /* 2 */\n  display: table; /* 1 */\n  max-width: 100%; /* 1 */\n  padding: 0; /* 3 */\n  white-space: normal; /* 1 */\n}\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\n\nprogress {\n  vertical-align: baseline;\n}\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n\n[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/* Interactive\n   ========================================================================== */\n\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\n\ndetails {\n  display: block;\n}\n\n/*\n * Add the correct display in all browsers.\n */\n\nsummary {\n  display: list-item;\n}\n\n/* Misc\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 10+.\n */\n\ntemplate {\n  display: none;\n}\n\n/**\n * Add the correct display in IE 10.\n */\n\n[hidden] {\n  display: none;\n}\n","@import '_normalize';\n@import '_variables';\n@import '_login';\n@import '_cards';\n@import '_book';\n@import '_nav';\n\n// main stylings\n* {\n  margin: 0;\n  padding: 0;\n  font-family: $primary-font;\n}\n\nhtml {\n  height: 100%;\n}\n\nbody {\n  background-image: url(\"../images/background.png\");\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  background-size: auto;\n  height: 100%;\n}\n\nmain {\n  display: flex;\n  justify-content: center;\n  height: 100%;\n}\n\nh1 {\n  font-family: $header-font;\n  color: $black;\n}\n\nh2 {\n  font-family: $header-font;\n  color: $black;\n}\n\n.user-page {\n  background-color: rgba(255, 255, 255, 0.61);\n}\n\n.hidden {\n  display: none;\n}\n","// LOGIN PAGE\n.login-page {\n  display: flex;\n  height: 100%;\n  width: 100%;\n  justify-content: center;\n  align-items: center;\n  font-family: $primary-font;\n\n  @media screen and (max-width: 800px) {\n    margin-top: 18vw;\n  }\n\n  @media screen and (max-width: 500px) {\n    margin-top: 23vw;\n  }\n}\n\n.login-container {\n  padding-top: 5%;\n  display: grid;\n  grid-template-rows: 45% 45%;\n  height: 40%;\n  width: 35%;\n  color: $black;\n  background-color: $login-container-color;\n  font-size: 20px;\n  border-radius: 5px;\n\n  @media screen and (max-width: 400px) {\n    width: 80%;\n  }\n}\n\n.logo-login {\n  align-self: center;\n  justify-self: center;\n  height: 200%;\n\n  @media screen and (max-width: 1050px) {\n    height: 100%;\n  }\n\n  @media screen and (max-width: 800px) {\n    height: 80%;\n  }\n}\n\n.login-form {\n  display: flex;\n  flex-direction: column;\n  justify-self: center;\n  justify-content: space-around;\n  align-items: center;\n  width: 60%;\n  padding: 1vw;\n  color: $black;\n\n  @media screen and (max-width: 1050px) {\n    width: 80%;\n  }\n\n  @media screen and (max-width: 800px) {\n    width: 100%;\n  }\n}\n\n.login-input {\n  width: 50%;\n  padding: 0.25vw;\n  border: 1px solid $black;\n  font-size: 15px;\n  margin: 1%;\n  border-radius: 5px;\n\n  @media screen and (max-width: 1050px) {\n    width: 50%;\n  }\n}\n\n.login-btn {\n  width: 5em;\n  align-self: center;\n  cursor: pointer;\n  margin-top: 2%;\n  border: 1px solid $black;\n  font-size: 15px;\n  padding: 1%;\n  border-radius: 5px;\n\n  &:hover {\n    background-color: $button-hover-color;\n  }\n}\n\n.login-error {\n  color: red;\n  font-size: 2vh;\n}","// COLORS\n$accent-color: #416788;\n$black: black;\n$grey: #808080;\n$white: #ffffff;\n$button-color: #466b77;\n$button-hover-color: #5E6572;\n$login-container-color: rgba(255,255,255,0.5);\n$user-pg-color: rgba(255, 255, 255, 0.61);\n\n// FONTS\n$primary-font: 'Kanit', sans-serif;\n$header-font: 'Pacifico', cursive;\n","// TRIP CARDS\n.main-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  width: 94%;\n  height: 100%;\n}\n\n// four card grid width - lg screens\n.grid-title {\n  display: flex;\n  align-items: center;\n  height: 3vw;\n  margin: 4% 0 4% 1.5%;\n  font-size: 3vw;\n  color: $black;\n}\n\n.card-grid {\n  display: grid;\n  grid-template-columns: 23% 23% 23% 23%;\n  grid-row-gap: 1.5%;\n  justify-content: space-evenly;\n  align-content: flex-start;\n  width: 100%;\n  height: 100%;\n  margin-bottom: 5%;\n}\n\n.card {\n  display: grid;\n  grid-template-rows: 40% 60%;\n  width: auto;\n  height: 80vh;\n  border-radius: 3px;\n}\n\n.card-top {\n  border-radius: 3px 3px 0 0;\n  background-size: cover;\n}\n\n.card-bottom {\n  display: grid;\n  grid-template-rows: 20% 23% 23% 23%;\n  align-items: flex-end;\n  padding: 1.6vw;\n  border-radius: 0 0 3px 3px;\n  background: rgba(255, 255, 255, 0.829);\n}\n\n.trip-info {\n  display: grid;\n  grid-template-columns: 60% 40%;\n  width: 100%;\n  margin: 5% 1% 3%;\n\n  h3 {\n    font-size: 1.25vw;\n    margin: 0;\n  }\n\n  h2 {\n    font-family: $primary-font;\n    font-size: 1.2vw;\n    margin: 0;\n    color: $accent-color;\n  }\n}\n\n// three card width - med screens\n@media screen and (min-width: 826px) and (max-width: 1200px) {\n  .grid-title {\n    font-size: 3vw;\n    margin: 5% 0 5% 1.5%;\n    font-family: $primary-font;\n  }\n\n  .card {\n    height: 44vw;\n  }\n\n  .trip-info {\n    h3 {\n      font-size: 2vw;\n      margin: 0;\n    }\n\n    h2 {\n      font-family: $primary-font;\n      font-size: 1.7vw;\n      margin: 0;\n      color: $accent-color;\n    }\n  }\n\n  .card-grid {\n    grid-template-columns: 31% 31% 31%;\n    grid-row-gap: 1.75%;\n  }\n}\n\n// two card width - smaller screens\n@media screen and (min-width: 575px) and (max-width: 825px) {\n  .grid-title {\n    margin: 5% 0 5% 2.7%;\n    font-size: 2vw;\n  }\n\n  .card-grid {\n    grid-template-columns: 45% 45%;\n    grid-column-gap: 1.5%;\n    grid-row-gap: 1.75%;\n  }\n\n  .card {\n    height: 60vw;\n  }\n\n  .trip-info {\n    h3 {\n      font-size: 2.8vw;\n      margin: 0;\n    }\n\n    h2 {\n      font-family: $primary-font;\n      font-size: 2.5vw;\n      margin: 0;\n      color: $accent-color;\n    }\n  }\n}\n\n// one card width - smallest screens - phones\n@media screen and (max-width: 575px) {\n  .grid-title {\n    margin: 8% 0 7% 10%;\n    font-size: 2.5vh;\n  }\n\n  .card-grid {\n    grid-template-columns: 80%;\n    grid-row-gap: 1%;\n  }\n\n  .card {\n    height: 110vw;\n  }\n\n  .card-bottom {\n    justify-content: center;\n    align-items: center;\n    padding: 3.5vw 6vw 0 0;\n  }\n\n  .trip-info {\n    h3 {\n      font-size: 4.0vw;\n      margin: 0;\n    }\n\n    h2 {\n      font-family: $primary-font;\n      font-size: 3.5vw;\n      margin: 0;\n      color: $accent-color;\n    }\n  }\n}\n\n.no-results {\n  font-size: 2vw;\n}\n","// BOOKING SECTION\n.booking-section {\n  display: grid;\n  grid-template-rows: 30% 70%;\n  margin: 3% 7% 1%;\n  max-height: 20vh;\n  background-image: linear-gradient(#0B3954, #4d7ea8, #7d98a1);\n  color: $black;\n  border: 2px solid $grey;\n  border-radius: 20px;\n}\n\n.book-top {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-top: 2%;\n  font-size: 2.5vw;\n  font-weight: bold;\n  color: $white;\n\n  @media screen and (max-width: 1200px) {\n    font-size: 30px;\n  }\n\n  @media screen and (max-width: 700px) {\n    font-size: 20px;\n  }\n}\n\n.book-bottom {\n  display: grid;\n  grid-template-columns: 18% 18% 18% 18% 18%;\n  justify-content: space-around;\n  margin: 1% 1% 1% 2%;\n\n  input,\n  select {\n    max-width: 15vw;\n    margin-top: 5%;\n    font-size: 1vw;\n\n    @media screen and (max-width: 1200px) {\n      height: 2.5vh;\n      font-size: 1.2vw;\n    }\n\n    @media screen and (max-width: 900px) {\n      height: 2.5vh;\n      font-size: 1.5vw;\n    }\n\n    @media screen and (max-width: 700px) {\n      height: 3vh;\n      font-size: 2vw;\n    }\n  }\n\n  label {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-end;\n    margin-bottom: 8%;\n    font-size: 1.25vw;\n    color: $black;\n\n    @media screen and (max-width: 1200px) {\n      font-size: 2vw;\n    }\n\n    @media screen and (max-width: 650px) {\n      font-size: 3.5vw;\n    }\n  }\n}\n\n.selection {\n  display: flex;\n  flex-direction: row;\n  margin: 0;\n  justify-content: center;\n  height: 100%;\n}\n\n.booking-btns {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  margin-left: 3%;\n\n  button {\n    margin: 2%;\n    padding: 2% 3%;\n    font-size: 1vw;\n    cursor: pointer;\n    border-radius: 15px;\n\n    &:hover {\n      background-color: $button-hover-color;\n    }\n\n    @media screen and (max-width: 900px) {\n      font-size: 1.5vw;\n    }\n    \n    @media screen and (max-width: 400px) {\n      width: 13vw;\n      height: 5vh;\n      font-size: 2vw;\n    }\n  }\n}\n\n.booking-message {\n  color: #9E2400;\n  font-family: $primary-font;\n  font-size: 2.5vh;\n}\n","// NAV BAR\nheader {\n  display: grid;\n  grid-template-columns: 70% 30%;\n  background-size: cover;\n  border-bottom: 0.6em solid $black;\n  height: 38vh;\n  \n  @media screen and (max-width: 1150px) {\n    height: 30vh;\n  }\n\n  @media screen and (max-width: 750px) {\n    height: 25vh;\n  }\n}\n\n// LEFT\n.nav-left {\n  display: grid;\n  grid-template-rows: 40% 25%;\n  align-items: space-between;\n  height: 10vh;\n\n  .title {\n    padding-top: 10%;\n    justify-self: center;\n    align-self: center;\n    font-size: 4.0vw;\n    padding-bottom: 0;\n    color: $black;\n    font-family: $header-font;\n    @media screen and (max-width: 750px) {\n      font-size: 4.5vw;\n    }\n\n    @media screen and (max-width: 500px) {\n      font-size: 8vw;\n    }\n  }\n\n  .current-date {\n    padding-top: 25%;\n    justify-self: center;\n    align-self: center;\n    font-size: 2.5vw;\n    @media screen and (max-width: 750px) {\n      font-size: 3.5vw;\n    }\n\n    @media screen and (max-width: 500px) {\n      font-size: 5vw;\n    }\n  }\n}\n\n.nav-btns {\n  display: grid;\n  grid-template-columns: 20% 20% 20% 20% 20%;\n  width: 100%;\n  justify-content: space-evenly;\n  align-items: flex-end;\n  margin-top: 20%;\n\n  button {\n    justify-self: center;\n    align-self: center;\n    width: 10vw;\n    height: 6vh;\n    color: $white;\n    background-color: $button-color;\n    border: 3px solid $black;\n    font-size: 1.2vw;\n    border-radius: 20px;\n    cursor: pointer;\n\n    &:hover {\n      background-color: $button-hover-color;\n    }\n\n    @media screen and (max-width: 1150px) {\n      width: 12vw;\n      font-size: 1.5vw;\n    }\n\n    @media screen and (max-width: 850px) {\n      width: 13vw;\n      font-size: 1.8vw;\n    }\n\n    @media screen and (max-width: 400px) {\n      height: 5vh;\n      width: 15vw;\n      font-size: 2.5vw;\n    }\n  }\n}\n\n// RIGHT\n.nav-right {\n  display: grid;\n  grid-template-rows: 60% 40%;\n\n  .welcome {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    justify-self: center;\n    align-self: center;\n    align-items: center;\n    width: 10vw;\n    max-height: 4vw;\n    font-size: 2.3vw;\n    font-weight: bold;\n    color: $black;\n\n    @media screen and (max-width: 750px) {\n      font-size: 3vw;\n    }\n\n    @media screen and (max-width: 500px) {\n      font-size: 3.5vw;\n    }\n  }\n\n  .total-spent {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    justify-self: center;\n    align-self: center;\n    align-items: center;\n    width: 14vw;\n    height: 6vh;\n    background-color: $accent-color;\n    color: $black;\n    \n    @media screen and (max-width: 1150px) {\n      height: 6vh;\n      width: 18vw;\n    }\n\n    @media screen and (max-width: 750px) {\n      height: 6vh;\n      width: 16vw;\n    }\n  }\n\n  .total-title {\n    font-size: 1.4vw;\n    font-weight: bold;\n    color: $white;\n\n    @media screen and (max-width: 1150px) {\n      font-size: 1.8vw;\n    }\n\n    @media screen and (max-width: 500px) {\n      font-size: 2.8vw;\n    }\n  }\n\n  .total-amount {\n    font-size: 1.2vw;\n    color: $white;\n\n    @media screen and (max-width: 1150px) {\n      font-size: 1.4vw;\n    }\n\n    @media screen and (max-width: 750px) {\n      font-size: 1.8vw;\n    }\n\n    @media screen and (max-width: 500px) {\n      font-size: 2.6vw;\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
-/* 5 */
+/* 8 */
 /***/ ((module) => {
 
 "use strict";
@@ -375,7 +403,7 @@ module.exports = function cssWithMappingToString(item) {
 };
 
 /***/ }),
-/* 6 */
+/* 9 */
 /***/ ((module) => {
 
 "use strict";
@@ -447,7 +475,7 @@ module.exports = function (cssWithMappingToString) {
 };
 
 /***/ }),
-/* 7 */
+/* 10 */
 /***/ ((module) => {
 
 "use strict";
@@ -487,7 +515,7 @@ module.exports = function (url, options) {
 };
 
 /***/ }),
-/* 8 */
+/* 11 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -495,10 +523,134 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("images/background.png");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);
+
+var isBetween = __webpack_require__(2)
+dayjs__WEBPACK_IMPORTED_MODULE_0__.extend(isBetween)
+
+
+let domUpdates = {
+  changePageView(date) {
+    const loginPage = document.getElementById('loginPage');
+    const userPage = document.getElementById('userPage');
+    const currentDate = document.getElementById('currentDate');
+    loginPage.classList.add('hidden');
+    userPage.classList.remove('hidden');
+    currentDate.innerHTML += `${date}`;
+  },
+
+  welcomeUserName(user) {
+    const welcomeName = document.getElementById('currUserName');
+    const firstName = user.returnFirstName();
+    welcomeName.innerText = `${firstName}!`;
+  },
+
+  makeDestinationSelections(allDestinations) {
+    let destinationInput = document.getElementById("destinationMenu");
+
+    allDestinations.sort((a, b) => a.destination.localeCompare(b.destination))
+
+    allDestinations.forEach(destination => {
+      destinationInput.innerHTML += `<option value="${destination.id}">${destination.destination}</option>`;
+    })
+  },
+
+  displayAnnualCosts(totalCost) {
+    const totalDisplay = document.getElementById('totalAmount');
+    totalDisplay.innerText = `$${totalCost.toFixed(2)}`;
+  },
+
+  displayTrips(trips, tripCardsSection, bannerMessage, allDestinations) {
+    this.displayTripCardsBanner(trips, tripCardsSection, bannerMessage, allDestinations)
+  },
+
+  displayTripCardsBanner(trips, tripCardsSection, bannerMessage, allDestinations) {
+    let banner = document.getElementById('gridTitle');
+    if (trips.length === 0) {
+      tripCardsSection.innerHTML = ``
+      banner.innerHTML =
+        `<h2>No Trips to See Here! Book a Trip above to start planning your next adventure.</h2>`
+    } else {
+      banner.innerHTML =
+        `<h2>${bannerMessage}</h2>`
+      this.displayTripCards(trips, tripCardsSection, allDestinations)
+    }
+  },
+
+  displayTripCards(trips, tripCardsSection, allDestinations) {
+    tripCardsSection.innerHTML = ``
+    let sortedTrips = trips.sort((a, b) => (dayjs__WEBPACK_IMPORTED_MODULE_0__(b.date).isAfter(dayjs__WEBPACK_IMPORTED_MODULE_0__(a.date)) ? 1 : -1))
+
+    sortedTrips.forEach(trip => {
+      trip.getPrettyFormatDates();
+      trip.getDestinationInfo(allDestinations);
+      tripCardsSection.innerHTML +=
+        `<article class="card">
+            <section class="card-top" aria-label="[photograph of ${trip.destination.destination}]" style="background-image: url(${trip.destination.image})">
+            </section>
+            <section class="card-bottom">
+            <h2 id="destination">${trip.destination.destination}</h2>
+              <div class="trip-info">
+                <h3>Start Date:</h3>
+                <h2 id="startDate">${trip.startDate}</h2>
+              </div>
+              <div class="trip-info">
+                <h3>Duration:</h3>
+                <h2 id="duration">${trip.duration} days</h2>
+              </div>
+              <div class="trip-info">
+                <h3>Travelers:</h3>
+                <h2 id="travelers">${trip.travelers}</h2>
+              </div>
+              <div class="trip-info">
+                <h3>Trip Status:</h3>
+                <h2 id="tripStatus">${trip.status}</h2>
+              </div>
+            </section>
+          </article>`;
+    })
+  },
+
+  buildBookingMessage(newTrip) {
+    const bookingMessage = document.getElementById('bookingMessage');
+    let place = newTrip.destination;
+    let costString = newTrip.cost.toFixed(2).toString();
+
+    bookingMessage.innerHTML = `Congratulations, you've booked a trip to ${place.destination} for $${costString}!`;
+  },
+
+  buildCostMessage(cost) {
+    const bookingMessage = document.getElementById('bookingMessage');
+
+    bookingMessage.innerHTML = `The total cost of this trip would be $${cost}`;
+  },
+
+  buildErrorMessage() {
+    const bookingMessage = document.getElementById('bookingMessage');
+
+    bookingMessage.innerHTML = `Please provide all required booking information and a date after current date.`;
+  },
+
+  buildLoginErrorMessage(type) {
+    const loginError = document.getElementById('loginError');
+    loginError.classList.remove('hidden');
+    if (type === 'password') {
+      loginError.innerText = `Password is incorrect.`
+    } else if (type === 'username') {
+      loginError.innerText = `Username is incorrect.`
+    }  else if (type === 'both') {
+      loginError.innerText = `Username or password is incorrect.`
+    }
+  }
+
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (domUpdates);
+
 
 /***/ }),
-/* 9 */
+/* 12 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -506,7 +658,244 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("images/logo.png");
+const apiCalls = {
+
+  getAllTravelers() {
+    return fetch('http://localhost:3001/api/v1/travelers')
+      .then(response =>
+        response.json()
+      )
+      .then(allTravelers => {
+        return allTravelers.travelers
+      })
+  },
+
+  getAllTrips() {
+    return fetch('http://localhost:3001/api/v1/trips')
+      .then(response =>
+        response.json()
+      )
+      .then(allTrips => {
+        return allTrips.trips
+      })
+  },
+
+  getAllDestinations() {
+    return fetch('http://localhost:3001/api/v1/destinations')
+      .then(response =>
+        response.json()
+      )
+      .then(allDestinations => {
+        return allDestinations.destinations
+      })
+  },
+
+  getSingleTraveler(userID) {
+    return fetch(`http://localhost:3001/api/v1/travelers/${userID}`)
+      .then(response =>
+        response.json()
+      )
+      .then(currentTraveler => {
+        return currentTraveler
+      })
+  },
+
+  getAllData() {
+    return Promise.all([this.getAllTravelers(), this.getAllTrips(), this.getAllDestinations()])
+      .then(data => data)
+      .catch(err => console.log(err))
+  },
+
+  getSingleTravelerData(userID) {
+    return Promise.all([this.getSingleTraveler(userID)])
+      .then(data => data)
+      .catch(err => console.log(err))
+  },
+
+
+  postNewTrip(tripData) {
+    return fetch('http://localhost:3001/api/v1/trips', {
+      method: 'POST',
+      body: JSON.stringify(tripData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Sorry, we could not process your booking request.`);
+        }
+        return response.json()
+      })
+      .then(this.getAllData())
+      .catch(err => console.log(err))
+  }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (apiCalls);
+
+
+/***/ }),
+/* 13 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _src_Trip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var isBetween = __webpack_require__(2)
+dayjs__WEBPACK_IMPORTED_MODULE_1__.extend(isBetween)
+
+class Traveler {
+  constructor(traveler) {
+    this.id = traveler.id
+    this.name = traveler.name
+    this.type = traveler.travelerType;
+    this.allTrips = [];
+    this.annualCost = 0;
+    this.past = [];
+    this.present = [];
+    this.upcoming = [];
+    this.pending = [];
+  }
+
+  returnFirstName() {
+    return this.name.split(' ')[0]
+  }
+
+  getAllTrips(allTrips) {
+    allTrips.forEach(trip => {
+      if (trip.userID === this.id) {
+        this.allTrips.push(new _src_Trip__WEBPACK_IMPORTED_MODULE_0__.default(trip));
+      }
+    });
+    this.allTrips.forEach(trip => trip.getDates());
+  }
+
+  getCurrentTrips(currentDate) {
+    return this.allTrips.filter(trip => {
+      if (dayjs__WEBPACK_IMPORTED_MODULE_1__(currentDate).isBetween(trip.startDate, trip.endDate) || currentDate === trip.startDate) {
+        return this.present.push(trip);
+      }
+    });
+  }
+
+  getUpcomingTrips(currentDate) {
+    return this.allTrips.filter(trip => {
+      if (dayjs__WEBPACK_IMPORTED_MODULE_1__(currentDate).isBefore(trip.startDate) === true) {
+        return this.upcoming.push(trip)
+      }
+    })
+  }
+
+  getPastTrips(currentDate) {
+    return this.allTrips.filter(trip => {
+      if (dayjs__WEBPACK_IMPORTED_MODULE_1__(trip.startDate).isBefore(currentDate) === true && dayjs__WEBPACK_IMPORTED_MODULE_1__(trip.endDate).isBefore(currentDate)) {
+        return this.past.push(trip)
+      }
+    })
+  }
+
+  getPendingTrips() {
+    return this.allTrips.filter(trip => {
+      if (trip.status === 'pending') {
+        return this.pending.push(trip)
+      }
+    })
+  }
+
+  calcAnnualSpending(currentDate, data) {
+    let currentYear = dayjs__WEBPACK_IMPORTED_MODULE_1__(currentDate).year();
+    let tripArr = this.allTrips.filter(trip => {
+      trip.getDestinationInfo(data);
+      let tripYear = dayjs__WEBPACK_IMPORTED_MODULE_1__(trip.startDate).year();
+      if (tripYear === currentYear && trip.status === 'approved') {
+        return trip
+      }
+    })
+
+    return tripArr.reduce((total, trip) => {
+      trip.estimateTotalTripCost();
+      total += trip.cost;
+      return this.annualCost = total;
+    }, 0);
+  }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Traveler);
+
+
+/***/ }),
+/* 14 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);
+
+
+class Trip {
+  constructor(tripsData) {
+    this.id = tripsData.id;
+    this.userID = tripsData.userID;
+    this.destinationID = tripsData.destinationID;
+    this.travelers = tripsData.travelers;
+    this.date = tripsData.date;
+    this.duration = tripsData.duration;
+    this.status = tripsData.status;
+    this.suggestedActivities = tripsData.suggestedActivities;
+    this.destination;
+    this.cost = 0;
+    this.startDate;
+    this.endDate;
+  }
+
+  getDates() {
+    let start = new Date(this.date);
+    let end = new Date(this.date).setDate(new Date(this.date).getDate() + this.duration);
+    this.startDate = dayjs__WEBPACK_IMPORTED_MODULE_0__(start).format('YYYY-MM-DD');
+    this.endDate = dayjs__WEBPACK_IMPORTED_MODULE_0__(end).format('YYYY-MM-DD');
+  }
+
+  getPrettyFormatDates() {
+    let start = new Date(this.date);
+    let end = new Date(this.date).setDate(new Date(this.date).getDate() + this.duration);
+
+    this.startDate = dayjs__WEBPACK_IMPORTED_MODULE_0__(start).format('MMMM D, YYYY');
+    this.endDate = dayjs__WEBPACK_IMPORTED_MODULE_0__(end).format('MMMM D, YYYY');
+  }
+
+  getDestinationInfo(destinationData) {
+    return destinationData.find(destination => {
+      if (this.destinationID === destination.id) {
+        return this.destination = destination;
+      }
+    })
+  }
+
+  estimateTotalTripCost() {
+    let total = 0;
+    total += this.destination.estimatedLodgingCostPerDay * this.duration
+    total += this.destination.estimatedFlightCostPerPerson * this.travelers
+    total += total * .10
+    return this.cost += parseFloat(total.toFixed(2));
+  }
+
+
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Trip);
+
 
 /***/ })
 /******/ 	]);
@@ -584,20 +973,223 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_base_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
-/* harmony import */ var _images_background_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
-// This is the JavaScript entry file - your code begins here
-// Do not delete or rename this file ********
+/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _images_background_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
+/* harmony import */ var _css_base_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
+/* harmony import */ var _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(11);
+/* harmony import */ var _apiCalls_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(12);
+/* harmony import */ var _Traveler_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(13);
+/* harmony import */ var _Trip_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(14);
+//~~~ Imports ~~~//
 
-// An example of how you tell webpack to use a CSS (SCSS) file
+var isBetween = __webpack_require__(2)
+dayjs__WEBPACK_IMPORTED_MODULE_0__.extend(isBetween)
+
+;
 
 
 
-// An example of how you tell webpack to use an image (also need to link to it in the index.html)
 
 
-console.log('This is the JavaScript entry file - your code begins here.');
+
+
+
+
+//~~~ Global Variables ~~~//
+let currentDate = dayjs__WEBPACK_IMPORTED_MODULE_0__().format('dddd, MMM D, YYYY');
+let currentTraveler;
+let allDestinations, allTrips;
+
+//~~~ Query Selectors ~~~//
+//Login Page 
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const loginButton = document.getElementById('loginBtn');
+//Nav Bar
+const allTripsBtn = document.getElementById('allTripsBtn');
+const currentTripsBtn = document.getElementById('currentTripsBtn');
+const upcomingTripsBtn = document.getElementById('upcomingTripsBtn');
+const previousTripsBtn = document.getElementById('previousTripsBtn');
+const pendingTripsBtn = document.getElementById('pendingTripsBtn');
+//Booking Section
+const destinationInput = document.getElementById('destinationMenu');
+const startDateInput = document.getElementById('startDateMenu');
+const durationInput = document.getElementById('durationInput');
+const travelersInput = document.getElementById('travelersInput');
+const costButton = document.getElementById('costBtn');
+const bookButton = document.getElementById('bookBtn');
+const cardGrid = document.getElementById('cardGrid');
+const bookingForm = document.getElementById('bookingForm');
+
+//~~~ Event Listeners ~~~//
+window.addEventListener('load', retrieveAllData);
+loginButton.addEventListener('click', checkLogin);
+loginButton.addEventListener('click', checkLogin);
+currentTripsBtn.addEventListener('click', showCurrentTripsPage)
+upcomingTripsBtn.addEventListener('click', showUpcomingTripsPage)
+previousTripsBtn.addEventListener('click', showPastTripsPage)
+pendingTripsBtn.addEventListener('click', showPendingTripsPage)
+allTripsBtn.addEventListener('click', showAllTrips)
+costButton.addEventListener('click', estimateTripCost);
+bookButton.addEventListener('click', bookNewTrip);
+
+//~~~ Functions ~~~//
+function retrieveAllData() {
+  _apiCalls_js__WEBPACK_IMPORTED_MODULE_5__.default.getAllData()
+    .then(data => {
+      allTrips = data[1];
+      allDestinations = data[2];
+
+    })
+}
+
+function retrieveSingleTraveler(userID) {
+  _apiCalls_js__WEBPACK_IMPORTED_MODULE_5__.default.getSingleTravelerData(userID)
+    .then(data => {
+      currentTraveler = new _Traveler_js__WEBPACK_IMPORTED_MODULE_6__.default(data[0])
+      createTraveler(currentTraveler);
+      displayUserInfo(currentTraveler);
+    })
+}
+
+function checkUsernameInput(numbers) {
+  if ((numbers === undefined) ||
+    (numbers === '0') ||
+    (numbers === '00') ||
+    (parseInt(numbers) > 50)) {
+    return false
+  } else {
+    return true
+  }
+}
+
+function checkPasswordInput(passwordValue) {
+  if (passwordValue !== 'travel2020') {
+    return false
+  } else {
+    return true
+  }
+}
+
+function checkLogin(event) {
+  const usernameValue = usernameInput.value.trim()
+  const passwordValue = passwordInput.value.trim()
+  const splitName = usernameValue.split('')
+  const numbers = splitName.slice(8, 10).join('')
+  const userIDInput = parseInt(numbers)
+
+  let usernameResult = checkUsernameInput(numbers);
+  let passwordResult = checkPasswordInput(passwordValue);
+
+  event.preventDefault();
+  if (usernameResult === false && passwordResult === false) {
+    _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.buildLoginErrorMessage('both')
+  } else if (usernameResult === false && passwordResult === true) {
+    _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.buildLoginErrorMessage('username')
+  } else if (usernameResult === true && passwordResult === false) {
+    _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.buildLoginErrorMessage('password')
+  } else if (usernameResult === true && passwordResult === true) {
+    retrieveSingleTraveler(userIDInput)
+  }
+}
+
+function createTraveler() {
+  currentTraveler.getAllTrips(allTrips);
+  currentTraveler.getCurrentTrips(currentDate)
+  currentTraveler.getUpcomingTrips(currentDate)
+  currentTraveler.getPastTrips(currentDate)
+  currentTraveler.getPendingTrips()
+}
+
+function displayUserInfo(traveler) {
+  _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.changePageView(currentDate);
+  _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.welcomeUserName(traveler);
+  _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.makeDestinationSelections(allDestinations);
+  _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.displayAnnualCosts(traveler.calcAnnualSpending(currentDate, allDestinations));
+  _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.displayTrips(currentTraveler.allTrips, cardGrid, "My Trips", allDestinations)
+}
+
+function showCurrentTripsPage() {
+  _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.displayTrips(currentTraveler.present, cardGrid, "My Current Trips", allDestinations)
+}
+
+function showUpcomingTripsPage() {
+  _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.displayTrips(currentTraveler.upcoming, cardGrid, "My Upcoming Trips", allDestinations)
+}
+
+function showPastTripsPage() {
+  _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.displayTrips(currentTraveler.past, cardGrid, "My Past Trips", allDestinations)
+}
+
+function showPendingTripsPage() {
+  _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.displayTrips(currentTraveler.pending, cardGrid, "My Pending Trips", allDestinations)
+}
+
+function showAllTrips() {
+  _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.displayTrips(currentTraveler.allTrips, cardGrid, "My Trips", allDestinations)
+}
+
+//~~~ POST NEW TRIP ~~~//
+function testTripInputs(newTripData) {
+  if (newTripData.date === '' || !newTripData.duration || !newTripData.travelers || newTripData.destinationID <= 0 || dayjs__WEBPACK_IMPORTED_MODULE_0__(newTripData.date).isBefore(currentDate)) {
+    return false;
+  }
+  return true
+}
+
+function makePostTripObject() {
+  let startDate = dayjs__WEBPACK_IMPORTED_MODULE_0__(startDateInput.value).format('YYYY/MM/DD');
+  let numDays = parseInt(durationInput.value);
+  let numTravelers = parseInt(travelersInput.value);
+  let destID = parseInt(destinationInput.value);
+
+  let newTripObject = {
+    "id": allTrips.length + 1,
+    "userID": currentTraveler.id,
+    "destinationID": destID,
+    "travelers": numTravelers,
+    "date": startDate,
+    "duration": numDays,
+    "status": "pending",
+    "suggestedActivities": []
+  };
+  return newTripObject;
+}
+
+function estimateTripCost() {
+  let newTripData = makePostTripObject();
+  let newTripInstance = new _Trip_js__WEBPACK_IMPORTED_MODULE_7__.default(newTripData);
+  let inputTest = testTripInputs(newTripData);
+  if (!inputTest) {
+    _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.buildErrorMessage();
+  } else {
+    newTripInstance.getDestinationInfo(allDestinations)
+    newTripInstance.estimateTotalTripCost();
+    let costString = newTripInstance.cost.toFixed(2).toString();
+    _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.buildCostMessage(costString)
+  }
+}
+
+function bookNewTrip() {
+  let newTripData = makePostTripObject();
+  let newTripInstance = new _Trip_js__WEBPACK_IMPORTED_MODULE_7__.default(newTripData);
+  let inputTest = testTripInputs(newTripData);
+
+  if (!inputTest) {
+    _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.buildErrorMessage();
+  } else {
+    _apiCalls_js__WEBPACK_IMPORTED_MODULE_5__.default.postNewTrip(newTripData)
+    currentTraveler.allTrips.push(newTripInstance)
+    currentTraveler.pending.push(newTripInstance)
+    currentTraveler.upcoming.push(newTripInstance)
+    newTripInstance.getDestinationInfo(allDestinations)
+    newTripInstance.estimateTotalTripCost();
+    _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.buildBookingMessage(newTripInstance)
+    _dom_updates_js__WEBPACK_IMPORTED_MODULE_4__.default.displayTrips(currentTraveler.allTrips, cardGrid, "My Trips", allDestinations)
+    bookingForm.reset();
+    retrieveAllData()
+  }
+}
 
 })();
 

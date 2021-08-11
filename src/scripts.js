@@ -41,8 +41,8 @@ const bookingForm = document.getElementById('bookingForm');
 
 //~~~ Event Listeners ~~~//
 window.addEventListener('load', retrieveAllData);
-loginButton.addEventListener('click', checkLogin);
-loginButton.addEventListener('click', checkLogin);
+// window.addEventListener('load', retrieveSingleTraveler(44));
+
 currentTripsBtn.addEventListener('click', showCurrentTripsPage)
 upcomingTripsBtn.addEventListener('click', showUpcomingTripsPage)
 previousTripsBtn.addEventListener('click', showPastTripsPage)
@@ -57,7 +57,7 @@ function retrieveAllData() {
     .then(data => {
       allTrips = data[1];
       allDestinations = data[2];
-
+      retrieveSingleTraveler(44)
     })
 }
 

@@ -5,11 +5,11 @@ dayjs.extend(isBetween)
 
 let domUpdates = {
   changePageView(date) {
-    const loginPage = document.getElementById('loginPage');
-    const userPage = document.getElementById('userPage');
+    // const loginPage = document.getElementById('loginPage');
+    // const userPage = document.getElementById('userPage');
     const currentDate = document.getElementById('currentDate');
-    loginPage.classList.add('hidden');
-    userPage.classList.remove('hidden');
+    // loginPage.classList.add('hidden');
+    // userPage.classList.remove('hidden');
     currentDate.innerHTML += `${date}`;
   },
 
