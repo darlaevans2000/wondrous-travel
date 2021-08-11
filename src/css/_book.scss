@@ -23,6 +23,10 @@
    @media screen and (max-width: 1200px) {
     font-size: 30px;
     // height: 22vh;
+    
+  }
+      @media screen and (max-width: 700px) {
+    font-size: 20px;
   }
 
 }
@@ -45,6 +49,10 @@
      height: 2.5vh;
     font-size: 1.5vw;
   }
+        @media screen and (max-width: 700px) {
+    height: 3vh;
+    font-size: 2vw;
+  }
   }
 
   label {
@@ -56,6 +64,9 @@
     color: $black;
      @media screen and (max-width: 1200px) {
     font-size: 2vw;
+  }
+       @media screen and (max-width: 650px) {
+    font-size: 3.5vw;
   }
   }
 }
@@ -85,8 +96,13 @@
       background-color: $button-hover-color;
     }
     @media screen and (max-width: 900px) {
-    //  height: 2.5vh;
+
     font-size: 1.5vw;
+  }
+      @media screen and (max-width: 400px) {
+        width: 13vw;
+        height: 5vh;
+    font-size: 2vw;
   }
   }
 }

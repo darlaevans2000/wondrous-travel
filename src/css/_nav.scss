@@ -30,6 +30,12 @@ header {
     padding-bottom: 0%;
     color: $black;
     font-family: $header-font;
+    @media screen and (max-width: 750px) {
+    font-size: 4.5vw;
+  }
+      @media screen and (max-width: 500px) {
+    font-size: 8vw;
+  }
   }
 
   .current-date {
@@ -37,6 +43,12 @@ header {
     justify-self: center;
     align-self: center;
     font-size: 2.5vw;
+        @media screen and (max-width: 750px) {
+    font-size: 3.5vw;
+  }
+      @media screen and (max-width: 500px) {
+    font-size: 5vw;
+  }
   }
 }
 
@@ -63,6 +75,19 @@ header {
      &:hover {
       background-color: $button-hover-color;
     }
+      @media screen and (max-width: 1150px) {
+    width: 12vw;
+    font-size: 1.5vw;
+  }
+    @media screen and (max-width: 850px) {
+      width: 13vw;
+    font-size: 1.8vw;
+  }
+      @media screen and (max-width: 400px) {
+        height: 5vh;
+      width: 15vw;
+    font-size: 2.5vw;
+  }
   }
 }
 
@@ -71,7 +96,7 @@ header {
   display: grid;
   grid-template-rows: 60% 40%;
 
-    .welcome {
+  .welcome {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -83,30 +108,59 @@ header {
   font-size: 2.3vw;
   font-weight: bold;
   color: $black;
+          @media screen and (max-width: 750px) {
+    font-size: 3vw;
+  }
+      @media screen and (max-width: 500px) {
+    font-size: 3.5vw;
+  }
     }
 
-    .total-spent {
+  .total-spent {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   justify-self: center;
   align-self: center;
   align-items: center;
-  width: 12vw;
-  height: 3.5vw;
+  width: 14vw;
+  height: 6vh;
   background-color: $accent-color;
   color: $black;
+    @media screen and (max-width: 1150px) {
+    height:  6vh;
+    width: 18vw;
+  }
+    @media screen and (max-width: 750px) {
+    height:  6vh;
+    width: 16vw;
+  }
   }
 
 .total-title {
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   font-weight: bold;
   color: $white;
+      @media screen and (max-width: 1150px) {
+    font-size: 1.8vw;
+  }
+        @media screen and (max-width: 500px) {
+    font-size: 2.8vw;
+  }
 }
 
 .total-amount {
-  font-size: 1vw;
+  font-size: 1.2vw;
   color: $white;
+      @media screen and (max-width: 1150px) {
+    font-size: 1.4vw;
+  }
+    @media screen and (max-width: 750px) {
+    font-size: 1.8vw;
+  }
+          @media screen and (max-width: 500px) {
+    font-size: 2.6vw;
+  }
 }
 }
 
