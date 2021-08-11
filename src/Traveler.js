@@ -76,7 +76,6 @@ class Traveler {
       trip.estimateTotalTripCost();
       total += trip.cost;
       return this.annualCost = total;
-      console.log(total)
     }, 0);
   }
 }

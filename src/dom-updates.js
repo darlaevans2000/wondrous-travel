@@ -31,7 +31,7 @@ let domUpdates = {
 
   displayAnnualCosts(totalCost) {
     const totalDisplay = document.getElementById('totalAmount');
-    totalDisplay.innerText = `$${totalCost}`;
+    totalDisplay.innerText = `$${totalCost.toFixed(2)}`;
   },
 
   displayTrips(trips, tripCardsSection, bannerMessage, allDestinations) {

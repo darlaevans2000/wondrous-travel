@@ -175,7 +175,7 @@ function estimateTripCost() {
   } else {
     newTripInstance.getDestinationInfo(allDestinations)
     newTripInstance.estimateTotalTripCost();
-    let costString = newTripInstance.cost.toFixed(1).toString();
+    let costString = newTripInstance.cost.toFixed(2).toString();
     domUpdates.buildCostMessage(costString)
   }
 }
