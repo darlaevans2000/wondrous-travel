@@ -46,7 +46,7 @@ const apiCalls = {
       .catch(err => console.log(err))
   },
 
-    getSingleTravelerData(userID) {
+  getSingleTravelerData(userID) {
     return Promise.all([this.getSingleTraveler(userID)])
       .then(data => data)
       .catch(err => console.log(err))
@@ -55,12 +55,12 @@ const apiCalls = {
 
   postNewTrip(tripData) {
     return fetch('http://localhost:3001/api/v1/trips', {
-        method: 'POST',
-        body: JSON.stringify(tripData),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
+      method: 'POST',
+      body: JSON.stringify(tripData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
       .then(response => {
         if (!response.ok) {
           throw new Error(`Sorry, we could not process your booking request.`);

@@ -1,7 +1,8 @@
-// import
+//~~~ Imports ~~~//
 import * as dayjs from 'dayjs'
 var isBetween = require('dayjs/plugin/isBetween')
 dayjs.extend(isBetween)
+
 import './images/logo.png'
 import './images/background.png'
 import './css/base.scss';
@@ -12,24 +13,23 @@ import Traveler from './Traveler.js';
 import Trip from './Trip.js';
 
 
-// global var
+//~~~ Global Variables ~~~//
 let currentDate = dayjs().format('dddd, MMM D, YYYY');
 let currentTraveler;
-let allDestinations, allTravelers, allTrips;
+let allDestinations, allTrips;
 
-
-// QS //
-//login
+//~~~ Query Selectors ~~~//
+//Login Page 
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
 const loginButton = document.getElementById('loginBtn');
-//nav
+//Nav Bar
 const allTripsBtn = document.getElementById('allTripsBtn');
 const currentTripsBtn = document.getElementById('currentTripsBtn');
 const upcomingTripsBtn = document.getElementById('upcomingTripsBtn');
 const previousTripsBtn = document.getElementById('previousTripsBtn');
 const pendingTripsBtn = document.getElementById('pendingTripsBtn');
-//booking
+//Booking Section
 const destinationInput = document.getElementById('destinationMenu');
 const startDateInput = document.getElementById('startDateMenu');
 const durationInput = document.getElementById('durationInput');
@@ -39,7 +39,7 @@ const bookButton = document.getElementById('bookBtn');
 const cardGrid = document.getElementById('cardGrid');
 const bookingForm = document.getElementById('bookingForm');
 
-// event listeners
+//~~~ Event Listeners ~~~//
 window.addEventListener('load', retrieveAllData);
 loginButton.addEventListener('click', checkLogin);
 loginButton.addEventListener('click', checkLogin);
@@ -51,22 +51,22 @@ allTripsBtn.addEventListener('click', showAllTrips)
 costButton.addEventListener('click', estimateTripCost);
 bookButton.addEventListener('click', bookNewTrip);
 
+//~~~ Functions ~~~//
 function retrieveAllData() {
   apiCalls.getAllData()
     .then(data => {
-      allTravelers = data[0];
       allTrips = data[1];
       allDestinations = data[2];
 
     })
-  }
+}
 
 function retrieveSingleTraveler(userID) {
   apiCalls.getSingleTravelerData(userID)
     .then(data => {
-    currentTraveler = new Traveler(data[0])
-    createTraveler(currentTraveler);
-    displayUserInfo(currentTraveler);
+      currentTraveler = new Traveler(data[0])
+      createTraveler(currentTraveler);
+      displayUserInfo(currentTraveler);
     })
 }
 
@@ -111,7 +111,7 @@ function checkLogin(event) {
   }
 }
 
-function createTraveler(user) {
+function createTraveler() {
   currentTraveler.getAllTrips(allTrips);
   currentTraveler.getCurrentTrips(currentDate)
   currentTraveler.getUpcomingTrips(currentDate)
@@ -147,7 +147,7 @@ function showAllTrips() {
   domUpdates.displayTrips(currentTraveler.allTrips, cardGrid, "My Trips", allDestinations)
 }
 
-//post new trip
+//~~~ POST NEW TRIP ~~~//
 function testTripInputs(newTripData) {
   if (newTripData.date === '' || !newTripData.duration || !newTripData.travelers || newTripData.destinationID <= 0 || dayjs(newTripData.date).isBefore(currentDate)) {
     return false;
@@ -192,8 +192,6 @@ function bookNewTrip() {
   let newTripData = makePostTripObject();
   let newTripInstance = new Trip(newTripData);
   let inputTest = testTripInputs(newTripData);
-  let id = currentTraveler.id;
-  console.log(id)
 
   if (!inputTest) {
     domUpdates.buildErrorMessage();
@@ -207,6 +205,6 @@ function bookNewTrip() {
     domUpdates.buildBookingMessage(newTripInstance)
     domUpdates.displayTrips(currentTraveler.allTrips, cardGrid, "My Trips", allDestinations)
     bookingForm.reset();
-    retrieveAllData(id)
+    retrieveAllData()
   }
 }

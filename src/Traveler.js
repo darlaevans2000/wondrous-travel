@@ -1,6 +1,5 @@
 import Trip from '../src/Trip';
 import * as dayjs from 'dayjs'
-import destinationData from '../test/test-data/destination-data';
 var isBetween = require('dayjs/plugin/isBetween')
 dayjs.extend(isBetween)
 

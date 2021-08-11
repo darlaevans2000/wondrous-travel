@@ -105,17 +105,17 @@ let domUpdates = {
     bookingMessage.innerHTML = `Please provide all required booking information and a date after current date.`;
   },
 
-  buildLoginErrorMessage(type){
+  buildLoginErrorMessage(type) {
     const loginError = document.getElementById('loginError');
     loginError.classList.remove('hidden');
-    if(type === 'password'){
+    if (type === 'password') {
       loginError.innerText = `Password is incorrect.`
     } else if (type === 'username') {
-    loginError.innerText = `Username is incorrect.`
-  }  else if (type === 'both') {
-    loginError.innerText = `Username or password is incorrect.`
+      loginError.innerText = `Username is incorrect.`
+    }  else if (type === 'both') {
+      loginError.innerText = `Username or password is incorrect.`
+    }
   }
-}
 
 }
 

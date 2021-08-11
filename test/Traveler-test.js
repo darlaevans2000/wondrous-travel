@@ -46,13 +46,13 @@ describe('Trip', () => {
     })
 
     it('should start off with0 annual cost data as default', ()=> {
-        expect(traveler1.annualCost).to.equal(0)
+      expect(traveler1.annualCost).to.equal(0)
     })
 
   })
   
   describe('Traveler methods', () => {
-      it('should return the travelers first name', () => {
+    it('should return the travelers first name', () => {
       expect(traveler1.returnFirstName()).to.equal('Ham')
       expect(traveler3.returnFirstName()).to.equal('Sibby')
     })
@@ -66,14 +66,14 @@ describe('Trip', () => {
     })
 
     it('should have list of the travelers past trips', () => {
-        traveler1.getAllTrips(tripsData);
-        traveler1.getPastTrips('2020-10-25')
-        expect(traveler1.past.length).to.equal(2)
+      traveler1.getAllTrips(tripsData);
+      traveler1.getPastTrips('2020-10-25')
+      expect(traveler1.past.length).to.equal(2)
 
 
-        traveler3.getAllTrips(tripsData);
-        traveler3.getPastTrips('2021-08-01')
-        expect(traveler3.past.length).to.equal(3)
+      traveler3.getAllTrips(tripsData);
+      traveler3.getPastTrips('2021-08-01')
+      expect(traveler3.past.length).to.equal(3)
     })
 
     it('should have list of the travelers current trips', () => {
@@ -97,14 +97,14 @@ describe('Trip', () => {
     })
 
     it('should have list of the travelers upcoming trips', () => {
-        traveler1.getAllTrips(tripsData);
-        traveler1.getUpcomingTrips('2020-01-01')
-        expect(traveler1.upcoming.length).to.equal(2)
+      traveler1.getAllTrips(tripsData);
+      traveler1.getUpcomingTrips('2020-01-01')
+      expect(traveler1.upcoming.length).to.equal(2)
 
 
-        traveler3.getAllTrips(tripsData);
-        traveler3.getUpcomingTrips('2020-09-18')
-        expect(traveler3.upcoming.length).to.equal(1)
+      traveler3.getAllTrips(tripsData);
+      traveler3.getUpcomingTrips('2020-09-18')
+      expect(traveler3.upcoming.length).to.equal(1)
     })
 
     it('should have list of the travelers pending trips', () => {
