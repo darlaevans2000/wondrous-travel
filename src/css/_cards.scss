@@ -1,5 +1,4 @@
-// CARD GRID
-
+// TRIP CARDS
 .main-container {
   display: flex;
   flex-direction: column;
@@ -7,6 +6,7 @@
   width: 94%;
   height: 100%;
 }
+
 // four card grid width - lg screens
 .grid-title {
   display: flex;
@@ -68,6 +68,7 @@
     color: $accent-color;
   }
 }
+
 // three card width - med screens
 @media screen and (min-width: 826px) and (max-width: 1200px) {
   .grid-title {
@@ -99,6 +100,7 @@
     grid-row-gap: 1.75%;
   }
 }
+
 // two card width - smaller screens
 @media screen and (min-width: 575px) and (max-width: 825px) {
   .grid-title {
@@ -130,6 +132,7 @@
     }
   }
 }
+
 // one card width - smallest screens - phones
 @media screen and (max-width: 575px) {
   .grid-title {

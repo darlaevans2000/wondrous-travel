@@ -1,18 +1,20 @@
 // NAV BAR
-
 header {
   display: grid;
   grid-template-columns: 70% 30%;
   background-size: cover;
   border-bottom: 0.6em solid $black;
   height: 38vh;
+  
   @media screen and (max-width: 1150px) {
     height: 30vh;
   }
+
   @media screen and (max-width: 750px) {
     height: 25vh;
   }
 }
+
 // LEFT
 .nav-left {
   display: grid;
@@ -31,6 +33,7 @@ header {
     @media screen and (max-width: 750px) {
       font-size: 4.5vw;
     }
+
     @media screen and (max-width: 500px) {
       font-size: 8vw;
     }
@@ -44,6 +47,7 @@ header {
     @media screen and (max-width: 750px) {
       font-size: 3.5vw;
     }
+
     @media screen and (max-width: 500px) {
       font-size: 5vw;
     }
@@ -73,14 +77,17 @@ header {
     &:hover {
       background-color: $button-hover-color;
     }
+
     @media screen and (max-width: 1150px) {
       width: 12vw;
       font-size: 1.5vw;
     }
+
     @media screen and (max-width: 850px) {
       width: 13vw;
       font-size: 1.8vw;
     }
+
     @media screen and (max-width: 400px) {
       height: 5vh;
       width: 15vw;
@@ -88,6 +95,7 @@ header {
     }
   }
 }
+
 // RIGHT
 .nav-right {
   display: grid;
@@ -105,9 +113,11 @@ header {
     font-size: 2.3vw;
     font-weight: bold;
     color: $black;
+
     @media screen and (max-width: 750px) {
       font-size: 3vw;
     }
+
     @media screen and (max-width: 500px) {
       font-size: 3.5vw;
     }
@@ -124,10 +134,12 @@ header {
     height: 6vh;
     background-color: $accent-color;
     color: $black;
+    
     @media screen and (max-width: 1150px) {
       height: 6vh;
       width: 18vw;
     }
+
     @media screen and (max-width: 750px) {
       height: 6vh;
       width: 16vw;
@@ -138,9 +150,11 @@ header {
     font-size: 1.4vw;
     font-weight: bold;
     color: $white;
+
     @media screen and (max-width: 1150px) {
       font-size: 1.8vw;
     }
+
     @media screen and (max-width: 500px) {
       font-size: 2.8vw;
     }
@@ -149,12 +163,15 @@ header {
   .total-amount {
     font-size: 1.2vw;
     color: $white;
+
     @media screen and (max-width: 1150px) {
       font-size: 1.4vw;
     }
+
     @media screen and (max-width: 750px) {
       font-size: 1.8vw;
     }
+
     @media screen and (max-width: 500px) {
       font-size: 2.6vw;
     }
