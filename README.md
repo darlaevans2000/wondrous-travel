@@ -12,7 +12,7 @@
 * [Author](#author)
 
 ## Introduction
-The primary goal of this project was to create an application for a traveler to manage and track their trips. A user can log in to see a dashboard with their past, present, future, and pending trips, along with the annual amount spent on travel. They can also fill out a form to make a trip request. The specifications can for the project can be found [here](https://frontend.turing.edu/projects/travel-tracker.html).
+The primary goal of this project was to create an application for a traveler to manage and track their trips. A user can log in to see a dashboard with their past, present, future, and pending trips, along with the annual amount spent on travel. They can also fill out a form to make a trip request. The specifications for the project can be found [here](https://frontend.turing.edu/projects/travel-tracker.html).
 
 ## Goals
 * Design & build a working app from scratch
