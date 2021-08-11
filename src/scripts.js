@@ -57,33 +57,33 @@ function retrieveAllData(userID) {
       allTrips = data[1];
       allDestinations = data[2];
       currentTraveler = new Traveler(data[3])
-    createTraveler(currentTraveler);
-    displayUserInfo(currentTraveler);
+      createTraveler(currentTraveler);
+      displayUserInfo(currentTraveler);
     })
 }
 
-  function checkUsernameInput(letters, numbers) {
-    if ((letters !== 'traveler') ||
-      (numbers === undefined) ||
-      (numbers === '0') ||
-      (numbers === '00') ||
-      (parseInt(numbers) > 50)) {
-      loginError.classList.remove('hidden');
-      loginError.innerText = `Username or password does not match.`
-      return false
-    } else {
-      return true
-    }
+function checkUsernameInput(letters, numbers) {
+  if ((letters !== 'traveler') ||
+    (numbers === undefined) ||
+    (numbers === '0') ||
+    (numbers === '00') ||
+    (parseInt(numbers) > 50)) {
+    loginError.classList.remove('hidden');
+    loginError.innerText = `Username or password does not match.`
+    return false
+  } else {
+    return true
   }
+}
 
-    function checkPasswordInput(passwordValue) {
-    if (passwordValue !== 'travel2020') {
-      loginError.classList.remove('hidden');
-      loginError.innerText = `Username or password does not match.`
-    } else {
-      return true
-    }
+function checkPasswordInput(passwordValue) {
+  if (passwordValue !== 'travel2020') {
+    loginError.classList.remove('hidden');
+    loginError.innerText = `Username or password does not match.`
+  } else {
+    return true
   }
+}
 
 function checkLogin(event) {
   const usernameValue = usernameInput.value.trim()
@@ -105,42 +105,42 @@ function checkLogin(event) {
 }
 
 function createTraveler(user) {
-   currentTraveler.getAllTrips(allTrips);
-   currentTraveler.getCurrentTrips(currentDate)
-   currentTraveler.getUpcomingTrips(currentDate)
-   currentTraveler.getPastTrips(currentDate)
-   currentTraveler.getPendingTrips()
+  currentTraveler.getAllTrips(allTrips);
+  currentTraveler.getCurrentTrips(currentDate)
+  currentTraveler.getUpcomingTrips(currentDate)
+  currentTraveler.getPastTrips(currentDate)
+  currentTraveler.getPendingTrips()
 }
 
 function displayUserInfo(traveler) {
-    domUpdates.changePageView(currentDate);
-    domUpdates.welcomeUserName(traveler);
-    domUpdates.makeDestinationSelections(allDestinations);
-    domUpdates.displayAnnualCosts(traveler.calcAnnualSpending(currentDate, allDestinations));
-    domUpdates.displayTrips(currentTraveler.allTrips, cardGrid, "My Trips", allDestinations)
+  domUpdates.changePageView(currentDate);
+  domUpdates.welcomeUserName(traveler);
+  domUpdates.makeDestinationSelections(allDestinations);
+  domUpdates.displayAnnualCosts(traveler.calcAnnualSpending(currentDate, allDestinations));
+  domUpdates.displayTrips(currentTraveler.allTrips, cardGrid, "My Trips", allDestinations)
 }
 
 function showCurrentTripsPage() {
-    domUpdates.displayTrips(currentTraveler.present, cardGrid, "My Current Trips", allDestinations)
+  domUpdates.displayTrips(currentTraveler.present, cardGrid, "My Current Trips", allDestinations)
 }
 
 function showUpcomingTripsPage() {
-    domUpdates.displayTrips(currentTraveler.upcoming, cardGrid, "My Upcoming Trips", allDestinations)
+  domUpdates.displayTrips(currentTraveler.upcoming, cardGrid, "My Upcoming Trips", allDestinations)
 }
 
 function showPastTripsPage() {
-    domUpdates.displayTrips(currentTraveler.past, cardGrid, "My Past Trips", allDestinations)
+  domUpdates.displayTrips(currentTraveler.past, cardGrid, "My Past Trips", allDestinations)
 }
 
 function showPendingTripsPage() {
-    domUpdates.displayTrips(currentTraveler.pending, cardGrid, "My Pending Trips", allDestinations)
+  domUpdates.displayTrips(currentTraveler.pending, cardGrid, "My Pending Trips", allDestinations)
 }
 
 function showAllTrips() {
-    domUpdates.displayTrips(currentTraveler.allTrips, cardGrid, "My Trips", allDestinations)
+  domUpdates.displayTrips(currentTraveler.allTrips, cardGrid, "My Trips", allDestinations)
 }
 
-//post new trip 
+//post new trip
 function testTripInputs(newTripData) {
   if (newTripData.date === '' || !newTripData.duration || !newTripData.travelers || newTripData.destinationID <= 0 || dayjs(newTripData.date).isBefore(currentDate)) {
     return false;
@@ -185,7 +185,7 @@ function bookNewTrip() {
   let newTripData = makePostTripObject();
   let newTripInstance = new Trip(newTripData);
   let inputTest = testTripInputs(newTripData);
-  
+
   if (!inputTest) {
     domUpdates.buildErrorMessage();
   } else {
@@ -193,12 +193,12 @@ function bookNewTrip() {
     currentTraveler.allTrips.push(newTripInstance)
     currentTraveler.pending.push(newTripInstance)
     currentTraveler.upcoming.push(newTripInstance)
-        newTripInstance.getDestinationInfo(allDestinations)
-        newTripInstance.estimateTotalTripCost();
-        domUpdates.buildBookingMessage(newTripInstance)
-        domUpdates.displayTrips(currentTraveler.allTrips, cardGrid, "My Trips", allDestinations)
-        bookingForm.reset();
-        apiCalls.getAllData()
-        retrieveAllData()
+    newTripInstance.getDestinationInfo(allDestinations)
+    newTripInstance.estimateTotalTripCost();
+    domUpdates.buildBookingMessage(newTripInstance)
+    domUpdates.displayTrips(currentTraveler.allTrips, cardGrid, "My Trips", allDestinations)
+    bookingForm.reset();
+    apiCalls.getAllData()
+    retrieveAllData()
   }
 }

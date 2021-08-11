@@ -3,13 +3,12 @@
 .booking-section {
   display: grid;
   grid-template-rows: 30% 70%;
-  margin: 3% 7% 1% 7%;
+  margin: 3% 7% 1%;
   max-height: 20vh;
   background-image: linear-gradient(#0B3954, #4d7ea8, #7d98a1);
   color: $black;
   border: 2px solid $grey;
   border-radius: 20px;
-
 }
 
 .book-top {
@@ -20,15 +19,13 @@
   font-size: 2.5vw;
   font-weight: bold;
   color: $white;
-   @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     font-size: 30px;
     // height: 22vh;
-    
   }
-      @media screen and (max-width: 700px) {
+  @media screen and (max-width: 700px) {
     font-size: 20px;
   }
-
 }
 
 .book-bottom {
@@ -37,22 +34,23 @@
   justify-content: space-around;
   margin: 1% 1% 1% 2%;
 
-  input, select {
+  input,
+  select {
     max-width: 15vw;
     margin-top: 5%;
     font-size: 1vw;
-   @media screen and (max-width: 1200px) {
-     height: 2.5vh;
-    font-size: 1.2vw;
-  }
+    @media screen and (max-width: 1200px) {
+      height: 2.5vh;
+      font-size: 1.2vw;
+    }
     @media screen and (max-width: 900px) {
-     height: 2.5vh;
-    font-size: 1.5vw;
-  }
-        @media screen and (max-width: 700px) {
-    height: 3vh;
-    font-size: 2vw;
-  }
+      height: 2.5vh;
+      font-size: 1.5vw;
+    }
+    @media screen and (max-width: 700px) {
+      height: 3vh;
+      font-size: 2vw;
+    }
   }
 
   label {
@@ -62,12 +60,12 @@
     margin-bottom: 8%;
     font-size: 1.25vw;
     color: $black;
-     @media screen and (max-width: 1200px) {
-    font-size: 2vw;
-  }
-       @media screen and (max-width: 650px) {
-    font-size: 3.5vw;
-  }
+    @media screen and (max-width: 1200px) {
+      font-size: 2vw;
+    }
+    @media screen and (max-width: 650px) {
+      font-size: 3.5vw;
+    }
   }
 }
 
@@ -87,7 +85,7 @@
 
   button {
     margin: 2%;
-    padding: 2% 3% 2% 3%;
+    padding: 2% 3%;
     font-size: 1vw;
     cursor: pointer;
     border-radius: 15px;
@@ -96,14 +94,13 @@
       background-color: $button-hover-color;
     }
     @media screen and (max-width: 900px) {
-
-    font-size: 1.5vw;
-  }
-      @media screen and (max-width: 400px) {
-        width: 13vw;
-        height: 5vh;
-    font-size: 2vw;
-  }
+      font-size: 1.5vw;
+    }
+    @media screen and (max-width: 400px) {
+      width: 13vw;
+      height: 5vh;
+      font-size: 2vw;
+    }
   }
 }
 

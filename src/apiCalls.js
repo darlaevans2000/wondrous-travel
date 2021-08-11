@@ -2,7 +2,7 @@ const apiCalls = {
 
   getAllTravelers() {
     return fetch('http://localhost:3001/api/v1/travelers')
-      .then(response => 
+      .then(response =>
         response.json()
       )
       .then(allTravelers => {
@@ -12,7 +12,7 @@ const apiCalls = {
 
   getAllTrips() {
     return fetch('http://localhost:3001/api/v1/trips')
-      .then(response => 
+      .then(response =>
         response.json()
       )
       .then(allTrips => {
@@ -22,7 +22,7 @@ const apiCalls = {
 
   getAllDestinations() {
     return fetch('http://localhost:3001/api/v1/destinations')
-      .then(response => 
+      .then(response =>
         response.json()
       )
       .then(allDestinations => {
@@ -30,38 +30,38 @@ const apiCalls = {
       })
   },
 
-    getSingleTraveler(userID) {
+  getSingleTraveler(userID) {
     return fetch(`http://localhost:3001/api/v1/travelers/${userID}`)
-      .then(response => 
+      .then(response =>
         response.json()
       )
       .then(singleTravelerData => {
-          return singleTravelerData
-    })
+        return singleTravelerData
+      })
   },
 
-    getAllData(userID) {
+  getAllData(userID) {
     return Promise.all([this.getAllTravelers(), this.getAllTrips(), this.getAllDestinations(), this.getSingleTraveler(userID)])
       .then(data => data)
       .catch(err => console.log(err))
   },
 
-    postNewTrip(tripData) {
+  postNewTrip(tripData) {
     return fetch('http://localhost:3001/api/v1/trips', {
-      method: 'POST',
-      body: JSON.stringify(tripData), 
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
+        method: 'POST',
+        body: JSON.stringify(tripData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
       .then(response => {
         if (!response.ok) {
           throw new Error(`Sorry, we could not process your booking request.`);
         }
-          return response.json()
+        return response.json()
       })
       .then(this.getAllData())
-         .catch(err => console.log(err))
+      .catch(err => console.log(err))
   }
 }
 

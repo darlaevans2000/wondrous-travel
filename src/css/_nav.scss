@@ -6,15 +6,13 @@ header {
   background-size: cover;
   border-bottom: 0.6em solid $black;
   height: 38vh;
-
   @media screen and (max-width: 1150px) {
     height: 30vh;
   }
-    @media screen and (max-width: 750px) {
+  @media screen and (max-width: 750px) {
     height: 25vh;
   }
 }
-
 // LEFT
 .nav-left {
   display: grid;
@@ -27,15 +25,15 @@ header {
     justify-self: center;
     align-self: center;
     font-size: 4.0vw;
-    padding-bottom: 0%;
+    padding-bottom: 0;
     color: $black;
     font-family: $header-font;
     @media screen and (max-width: 750px) {
-    font-size: 4.5vw;
-  }
-      @media screen and (max-width: 500px) {
-    font-size: 8vw;
-  }
+      font-size: 4.5vw;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 8vw;
+    }
   }
 
   .current-date {
@@ -43,12 +41,12 @@ header {
     justify-self: center;
     align-self: center;
     font-size: 2.5vw;
-        @media screen and (max-width: 750px) {
-    font-size: 3.5vw;
-  }
-      @media screen and (max-width: 500px) {
-    font-size: 5vw;
-  }
+    @media screen and (max-width: 750px) {
+      font-size: 3.5vw;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 5vw;
+    }
   }
 }
 
@@ -72,95 +70,93 @@ header {
     border-radius: 20px;
     cursor: pointer;
 
-     &:hover {
+    &:hover {
       background-color: $button-hover-color;
     }
-      @media screen and (max-width: 1150px) {
-    width: 12vw;
-    font-size: 1.5vw;
-  }
+    @media screen and (max-width: 1150px) {
+      width: 12vw;
+      font-size: 1.5vw;
+    }
     @media screen and (max-width: 850px) {
       width: 13vw;
-    font-size: 1.8vw;
-  }
-      @media screen and (max-width: 400px) {
-        height: 5vh;
+      font-size: 1.8vw;
+    }
+    @media screen and (max-width: 400px) {
+      height: 5vh;
       width: 15vw;
-    font-size: 2.5vw;
-  }
+      font-size: 2.5vw;
+    }
   }
 }
-
 // RIGHT
 .nav-right {
   display: grid;
   grid-template-rows: 60% 40%;
 
   .welcome {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  justify-self: center;
-  align-self: center;
-  align-items: center;
-  width: 10vw;
-  max-height: 4vw;
-  font-size: 2.3vw;
-  font-weight: bold;
-  color: $black;
-          @media screen and (max-width: 750px) {
-    font-size: 3vw;
-  }
-      @media screen and (max-width: 500px) {
-    font-size: 3.5vw;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    width: 10vw;
+    max-height: 4vw;
+    font-size: 2.3vw;
+    font-weight: bold;
+    color: $black;
+    @media screen and (max-width: 750px) {
+      font-size: 3vw;
     }
+    @media screen and (max-width: 500px) {
+      font-size: 3.5vw;
+    }
+  }
 
   .total-spent {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  justify-self: center;
-  align-self: center;
-  align-items: center;
-  width: 14vw;
-  height: 6vh;
-  background-color: $accent-color;
-  color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    width: 14vw;
+    height: 6vh;
+    background-color: $accent-color;
+    color: $black;
     @media screen and (max-width: 1150px) {
-    height:  6vh;
-    width: 18vw;
-  }
+      height: 6vh;
+      width: 18vw;
+    }
     @media screen and (max-width: 750px) {
-    height:  6vh;
-    width: 16vw;
-  }
+      height: 6vh;
+      width: 16vw;
+    }
   }
 
-.total-title {
-  font-size: 1.4vw;
-  font-weight: bold;
-  color: $white;
-      @media screen and (max-width: 1150px) {
-    font-size: 1.8vw;
-  }
-        @media screen and (max-width: 500px) {
-    font-size: 2.8vw;
-  }
-}
-
-.total-amount {
-  font-size: 1.2vw;
-  color: $white;
-      @media screen and (max-width: 1150px) {
+  .total-title {
     font-size: 1.4vw;
+    font-weight: bold;
+    color: $white;
+    @media screen and (max-width: 1150px) {
+      font-size: 1.8vw;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 2.8vw;
+    }
   }
-    @media screen and (max-width: 750px) {
-    font-size: 1.8vw;
-  }
-          @media screen and (max-width: 500px) {
-    font-size: 2.6vw;
-  }
-}
-}
 
+  .total-amount {
+    font-size: 1.2vw;
+    color: $white;
+    @media screen and (max-width: 1150px) {
+      font-size: 1.4vw;
+    }
+    @media screen and (max-width: 750px) {
+      font-size: 1.8vw;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 2.6vw;
+    }
+  }
+}

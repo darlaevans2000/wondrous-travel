@@ -12,7 +12,7 @@ import Trip from './Trip.js';
 // let currentDate = '2020-02-12';
 
 let domUpdates = {
-changePageView(date) {
+  changePageView(date) {
     const loginPage = document.getElementById('loginPage');
     const userPage = document.getElementById('userPage');
     const currentDate = document.getElementById('currentDate');
@@ -42,7 +42,7 @@ changePageView(date) {
     totalDisplay.innerText = `$${totalCost}`;
   },
 
- displayTrips(trips, tripCardsSection, bannerMessage, allDestinations) {
+  displayTrips(trips, tripCardsSection, bannerMessage, allDestinations) {
     this.displayTripCardsBanner(trips, tripCardsSection, bannerMessage, allDestinations)
   },
 
@@ -51,10 +51,10 @@ changePageView(date) {
     if (trips.length === 0) {
       tripCardsSection.innerHTML = ``
       banner.innerHTML =
-      `<h2>No Trips to See Here! Book a Trip above to start planning your next adventure.</h2>`
+        `<h2>No Trips to See Here! Book a Trip above to start planning your next adventure.</h2>`
     } else {
       banner.innerHTML =
-      `<h2>${bannerMessage}</h2>`
+        `<h2>${bannerMessage}</h2>`
       this.displayTripCards(trips, tripCardsSection, allDestinations)
     }
   },
@@ -64,10 +64,10 @@ changePageView(date) {
     let sortedTrips = trips.sort((a, b) => (dayjs(b.date).isAfter(dayjs(a.date)) ? 1 : -1))
 
     sortedTrips.forEach(trip => {
-        trip.getPrettyFormatDates();
-        trip.getDestinationInfo(allDestinations);
-        tripCardsSection.innerHTML += 
-          `<article class="card">
+      trip.getPrettyFormatDates();
+      trip.getDestinationInfo(allDestinations);
+      tripCardsSection.innerHTML +=
+        `<article class="card">
             <section class="card-top" aria-label="[photograph of ${trip.destination.destination}]" style="background-image: url(${trip.destination.image})">
             </section>
             <section class="card-bottom">
@@ -90,25 +90,25 @@ changePageView(date) {
               </div>
             </section>
           </article>`;
-      })
+    })
   },
 
-    buildBookingMessage(newTrip) {
-    const bookingMessage = document.getElementById('bookingMessage'); 
+  buildBookingMessage(newTrip) {
+    const bookingMessage = document.getElementById('bookingMessage');
     let place = newTrip.destination;
     let costString = newTrip.cost.toFixed(2).toString();
 
     bookingMessage.innerHTML = `Congratulations, you've booked a trip to ${place.destination} for $${costString}!`;
   },
 
-    buildCostMessage(cost) {
-    const bookingMessage = document.getElementById('bookingMessage'); 
+  buildCostMessage(cost) {
+    const bookingMessage = document.getElementById('bookingMessage');
 
     bookingMessage.innerHTML = `The total cost of this trip would be $${cost}`;
   },
 
   buildErrorMessage() {
-    const bookingMessage = document.getElementById('bookingMessage'); 
+    const bookingMessage = document.getElementById('bookingMessage');
 
     bookingMessage.innerHTML = `Please provide all required booking information and a date after current date.`;
   },

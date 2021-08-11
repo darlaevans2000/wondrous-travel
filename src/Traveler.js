@@ -21,7 +21,7 @@ class Traveler {
     return this.name.split(' ')[0]
   }
 
-   getAllTrips(allTrips) {
+  getAllTrips(allTrips) {
     allTrips.forEach(trip => {
       if (trip.userID === this.id) {
         this.allTrips.push(new Trip(trip));
@@ -32,7 +32,7 @@ class Traveler {
 
   getCurrentTrips(currentDate) {
     return this.allTrips.filter(trip => {
-      if(dayjs(currentDate).isBetween(trip.startDate, trip.endDate) || currentDate === trip.startDate) {
+      if (dayjs(currentDate).isBetween(trip.startDate, trip.endDate) || currentDate === trip.startDate) {
         return this.present.push(trip);
       }
     });
@@ -40,7 +40,7 @@ class Traveler {
 
   getUpcomingTrips(currentDate) {
     return this.allTrips.filter(trip => {
-      if(dayjs(currentDate).isBefore(trip.startDate) === true) {
+      if (dayjs(currentDate).isBefore(trip.startDate) === true) {
         return this.upcoming.push(trip)
       }
     })
@@ -48,7 +48,7 @@ class Traveler {
 
   getPastTrips(currentDate) {
     return this.allTrips.filter(trip => {
-      if(dayjs(trip.startDate).isBefore(currentDate) === true && dayjs(trip.endDate).isBefore(currentDate)) {
+      if (dayjs(trip.startDate).isBefore(currentDate) === true && dayjs(trip.endDate).isBefore(currentDate)) {
         return this.past.push(trip)
       }
     })
@@ -56,7 +56,7 @@ class Traveler {
 
   getPendingTrips() {
     return this.allTrips.filter(trip => {
-      if(trip.status === 'pending') {
+      if (trip.status === 'pending') {
         return this.pending.push(trip)
       }
     })
@@ -67,16 +67,16 @@ class Traveler {
     let tripArr = this.allTrips.filter(trip => {
       trip.getDestinationInfo(data);
       let tripYear = dayjs(trip.startDate).year();
-      if(tripYear === currentYear && trip.status === 'approved') {
+      if (tripYear === currentYear && trip.status === 'approved') {
         return trip
       }
     })
-    
+
     return tripArr.reduce((total, trip) => {
-        trip.estimateTotalTripCost();
-        total += trip.cost;
-        return this.annualCost = total;
-        console.log(total)
+      trip.estimateTotalTripCost();
+      total += trip.cost;
+      return this.annualCost = total;
+      console.log(total)
     }, 0);
   }
 }

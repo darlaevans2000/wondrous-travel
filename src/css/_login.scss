@@ -5,11 +5,9 @@
   justify-content: center;
   align-items: center;
   font-family: $primary-font;
-
   @media screen and (max-width: 800px) {
     margin-top: 18vw;
   }
-
   @media screen and (max-width: 500px) {
     margin-top: 23vw;
   }
@@ -25,7 +23,6 @@
   background-color: $login-container-color;
   font-size: 20px;
   border-radius: 5px;
-
   @media screen and (max-width: 400px) {
     width: 80%;
   }
@@ -35,13 +32,11 @@
   align-self: center;
   justify-self: center;
   height: 200%;
-
   @media screen and (max-width: 1050px) {
     height: 100%;
   }
-
   @media screen and (max-width: 800px) {
-   height: 80%;
+    height: 80%;
   }
 }
 
@@ -54,11 +49,9 @@
   width: 60%;
   padding: 1vw;
   color: $black;
-
   @media screen and (max-width: 1050px) {
     width: 80%;
   }
-
   @media screen and (max-width: 800px) {
     width: 100%;
   }
@@ -71,8 +64,6 @@
   font-size: 15px;
   margin: 1%;
   border-radius: 5px;
-  
-
   @media screen and (max-width: 1050px) {
     width: 50%;
   }
@@ -87,11 +78,12 @@
   font-size: 15px;
   padding: 1%;
   border-radius: 5px;
-  
+
   &:hover {
-      background-color: $button-hover-color;
-   }
+    background-color: $button-hover-color;
+  }
 }
+
 .login-error {
   color: red;
   font-size: 2vh;
