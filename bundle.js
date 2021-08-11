@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/wondrous-travel/logo.png");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("images/logo.png");
 
 /***/ }),
 /* 4 */
@@ -32,7 +32,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/wondrous-travel/background.png");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("images/background.png");
 
 /***/ }),
 /* 5 */
